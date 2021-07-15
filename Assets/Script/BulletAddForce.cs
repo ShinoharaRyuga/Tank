@@ -22,4 +22,13 @@ public class BulletAddForce : MonoBehaviour
         Destroy(this.gameObject, m_lifeTime);
         gameObject.transform.parent = null;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Tank")
+        {
+            Destroy(collision.gameObject);
+        }
+        Destroy(this.gameObject);
+    }
 }
