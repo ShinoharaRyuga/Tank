@@ -88,14 +88,14 @@ public class TankController : MonoBehaviour
             if (m_time > 2f)
             {
                 m_bulletCount++;
-                Debug.Log(m_bulletCount);
+              //  Debug.Log(m_bulletCount);
                 m_time = 0;
             }
         }
         else
         {
             m_time = 0f;
-            Debug.Log(m_time);
+            //Debug.Log(m_time);
         }
 
     }
