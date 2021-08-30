@@ -11,6 +11,9 @@ public class TankController : MonoBehaviour
     [SerializeField] GameObject m_bullet;
     /// <summary>弾数</summary>
     [SerializeField] int m_bulletCount;
+    
+    GameObject m_gameManager;
+    GameManager m_gameManagerScript;
     /// <summary>弾丸が飛ぶスピード</summary>
     float m_speed = 8f;
 
@@ -25,13 +28,18 @@ public class TankController : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody>();
         m_audio = this.gameObject.AddComponent<AudioSource>();
+        m_gameManager = GameObject.Find("GameManager");
+        m_gameManagerScript = m_gameManager.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Controller();
-        BulletController();
+        if (m_gameManagerScript.m_moveFlag)
+        {
+            Controller();
+            BulletController();
+        }
     }
 
     private void Controller()
