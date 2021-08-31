@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] GameObject m_bullet;
     /// <summary>弾数</summary>
     [SerializeField] int m_bulletCount;
-    /// <summary>弾丸が飛ぶスピード</summary>
+    /// <summary>移動スピード</summary>
     float m_speed = 8f;
 
     private GameObject m_player;
@@ -30,6 +30,6 @@ public class EnemyBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(m_playerPos.position);
+       // Debug.Log(m_playerPos.position);
     }
 }

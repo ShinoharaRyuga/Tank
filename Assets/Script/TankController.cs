@@ -14,7 +14,7 @@ public class TankController : MonoBehaviour
     
     GameObject m_gameManager;
     GameManager m_gameManagerScript;
-    /// <summary>弾丸が飛ぶスピード</summary>
+    /// <summary>Playerの移動スピード</summary>
     float m_speed = 8f;
 
     private AudioSource m_audio;
@@ -40,6 +40,12 @@ public class TankController : MonoBehaviour
             Controller();
             BulletController();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log(m_speed);
+        }
+        
     }
 
     private void Controller()
@@ -85,18 +91,18 @@ public class TankController : MonoBehaviour
                 m_audio.PlayOneShot(m_sound);
                 m_bulletCount--;
                 // Debug.Log("発射！！");
-                Debug.Log(m_bulletCount);
+                //Debug.Log(m_bulletCount);
             }
         }
 
         if (m_bulletCount < 8)
         {
             m_time += Time.deltaTime;
-            
+
             if (m_time > 2f)
             {
                 m_bulletCount++;
-              //  Debug.Log(m_bulletCount);
+                //  Debug.Log(m_bulletCount);
                 m_time = 0;
             }
         }
@@ -105,6 +111,10 @@ public class TankController : MonoBehaviour
             m_time = 0f;
             //Debug.Log(m_time);
         }
+    }
 
+    public void SpeedUp(float speed)
+    {
+        m_speed = speed;
     }
 }

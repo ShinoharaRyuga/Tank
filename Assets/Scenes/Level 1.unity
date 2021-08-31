@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_count: 5
-  m_gameManager: {fileID: 81240637}
+  m_gameManager: {fileID: 81240636}
 --- !u!1 &81240635
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +223,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81240638}
-  - component: {fileID: 81240637}
   - component: {fileID: 81240636}
   m_Layer: 0
   m_Name: GameManager
@@ -233,19 +232,6 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &81240636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81240635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7024b88168d37fd42bc174fde2655ad7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_moveFlag: 0
---- !u!114 &81240637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &171938059
 Transform:
   m_ObjectHideFlags: 0
@@ -392,28 +378,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -90, z: 0}
---- !u!1 &313199846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3044688964546626129, guid: e09bed44e86e0224b91154c63ffd67bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 377179238}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &313199850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313199846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2caa26017d0e1e4fa02605eb9aff5b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_bulletSpwan: {fileID: 1230859695}
-  m_bullet: {fileID: 4124186667938782307, guid: 0383cf512dc64d14e8db8eb75cff5eac,
-    type: 3}
-  m_bulletCount: 0
 --- !u!1001 &377179238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -481,21 +445,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueTank
       objectReference: {fileID: 0}
-    - target: {fileID: 7713959944547983040, guid: e09bed44e86e0224b91154c63ffd67bb,
-        type: 3}
-      propertyPath: m_sound
-      value: 
-      objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
-    - target: {fileID: 7713959944547983040, guid: e09bed44e86e0224b91154c63ffd67bb,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7713959944547983040, guid: e09bed44e86e0224b91154c63ffd67bb,
-        type: 3}
-      propertyPath: m_gameManager
-      value: 
-      objectReference: {fileID: 81240637}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
 --- !u!1001 &400486712
@@ -1042,12 +991,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1199393688}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1230859695 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7713959944894639372, guid: e09bed44e86e0224b91154c63ffd67bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 377179238}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1346054327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1432,7 +1375,7 @@ PrefabInstance:
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_gameManager
       value: 
-      objectReference: {fileID: 81240637}
+      objectReference: {fileID: 0}
     - target: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
       propertyPath: m_Name
@@ -1506,6 +1449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObstacleObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 439450345449083157, guid: 7c9df04c65ef43643a8479763932c21e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8183356252715788599, guid: 7c9df04c65ef43643a8479763932c21e,
         type: 3}

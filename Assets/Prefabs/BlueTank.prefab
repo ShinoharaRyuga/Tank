@@ -479,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3044688964546626128}
   - component: {fileID: 7713959944547983071}
-  - component: {fileID: 7713959944547983040}
+  - component: {fileID: 313199850}
   m_Layer: 0
   m_Name: BlueTank
   m_TagString: Tank
@@ -522,7 +522,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &7713959944547983040
+--- !u!114 &313199850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,12 +531,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3044688964546626129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d44f1ec08c195847b7490cf5835973d, type: 3}
+  m_Script: {fileID: 11500000, guid: f2caa26017d0e1e4fa02605eb9aff5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_bulletSpwan: {fileID: 7713959944894639372}
   m_bullet: {fileID: 4124186667938782307, guid: 0383cf512dc64d14e8db8eb75cff5eac,
     type: 3}
+  m_bulletCount: 0
 --- !u!1001 &3726815394377323691
 PrefabInstance:
   m_ObjectHideFlags: 0
