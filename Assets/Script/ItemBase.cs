@@ -2,25 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// アイテムを基底クラス
+/// </summary>
 public abstract class ItemBase : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
     public abstract void Use();
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Tank")
+        if (collision.gameObject.tag == "PlayerTank")
         {
             Destroy(this.gameObject);
             Use();

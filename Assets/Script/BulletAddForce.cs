@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Bulletに力を加えて飛ばすスクリプト
 /// </summary>
-public class EnemyBulletAddForce : MonoBehaviour
+public class BulletAddForce : MonoBehaviour
 {
     /// <summary>弾の生存期間（秒)</summary>
     [SerializeField] float m_lifeTime = 5f;
@@ -29,15 +29,16 @@ public class EnemyBulletAddForce : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         m_reflection++;
-        if (collision.gameObject.tag == "Tank")
+        if (collision.gameObject.tag == "Tank" || collision.gameObject.tag == "PlayerTank")
         {
             Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
-    }
 
-    public void ChangeSpeed(float speed)
-    {
-        m_speed = speed;
+        if (m_reflection > 2)
+        {
+            Destroy(this.gameObject);
+        }
+        
     }
 }

@@ -27,7 +27,7 @@ public class PlayerBulletAddForce : MonoBehaviour
     {
         m_reflection++;
         Debug.Log(m_reflection);
-        if (collision.gameObject.tag == "Tank")
+        if (collision.gameObject.tag == "Tank" || collision.gameObject.tag == "PlayerTank")
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
