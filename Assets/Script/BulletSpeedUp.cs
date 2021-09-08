@@ -8,8 +8,9 @@ using UnityEngine;
 /// </summary>
 public class BulletSpeedUp : ItemBase
 {
+    /// <summary>通常の弾丸よりスピードが速い弾丸を飛ばす</summary>
     public override void Use()
     {
-        FindObjectOfType<TankController>().SetBullet(Bulletkinds.speed);
+        FindObjectOfType<TankController>().SetBullet(Bulletkinds.Speed);
     }
 }

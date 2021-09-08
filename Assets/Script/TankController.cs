@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TankController : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class TankController : MonoBehaviour
     [SerializeField] AudioClip m_sound;
     /// <summary>弾丸が回復するまでの時間</summary>
     float m_time = 0f;
+
+    [SerializeField] Text m_bulletText;
     /// <summary>現在の弾丸</summary>
     Bulletkinds m_currentBullet;
     public Bulletkinds CurrentBullet { get => m_currentBullet; set => m_currentBullet = value; }
@@ -36,6 +39,7 @@ public class TankController : MonoBehaviour
         m_audio = this.gameObject.AddComponent<AudioSource>();
         m_gameManager = GameObject.Find("GameManager");
         m_gameManagerScript = m_gameManager.GetComponent<GameManager>();
+        m_currentBullet = Bulletkinds.Usually;
     }
 
     // Update is called once per frame
@@ -49,8 +53,10 @@ public class TankController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(m_speed);
+            Debug.Log(m_currentBullet);
         }
+
+        m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
     }
 
     /// <summary>Playerの移動関数</summary>
@@ -106,17 +112,28 @@ public class TankController : MonoBehaviour
         m_speed = speed;
     }
 
-    /// <summary>発射する弾丸を生成する関数</summary>
+    /// <summary>発射する弾丸,発射を生成する関数</summary>
     /// <param name="bullet"></param>
     public void FireBullet(Bulletkinds bullet)
     {
         switch (bullet)
         {
-            case Bulletkinds.usually:
+            case Bulletkinds.Usually:
                 Instantiate(m_bullet, m_bulletSpwan);
                 break;
-            case Bulletkinds.speed:
+            case Bulletkinds.Speed:
                 Instantiate(m_bullet1, m_bulletSpwan);
+                break;
+            case Bulletkinds.Double:
+                if (m_bulletCount >= 2)
+                {
+                    StartCoroutine(DoubleFire());
+                    m_bulletCount--;
+                }
+                else
+                {
+                    Instantiate(m_bullet, m_bulletSpwan);
+                }
                 break;
         }
     }
@@ -127,14 +144,25 @@ public class TankController : MonoBehaviour
     {
         CurrentBullet = bulletkinds;
     }
+
+    /// <summary>二連砲をで使う関数　砲弾を２個作成</summary>
+    IEnumerator DoubleFire()
+    {
+        Instantiate(m_bullet, m_bulletSpwan);
+        yield return new WaitForSeconds(0.07f);
+        Instantiate(m_bullet, m_bulletSpwan);
+        m_audio.PlayOneShot(m_sound);
+    }
 }
 
 /// <summary>弾丸の種類</summary>
 public enum Bulletkinds
 {
     /// <summary> 通常の弾丸</summary>
-    usually,
+    Usually,
     /// <summary> 通常よりも弾速が速い弾丸</summary>
-    speed,
+    Speed,
+    /// <summary> 二連弾丸</summary>
+    Double
 
 }

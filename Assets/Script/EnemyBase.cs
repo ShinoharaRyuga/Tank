@@ -30,6 +30,6 @@ public class EnemyBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log(m_playerPos.position);
+       Debug.Log(m_playerPos.position);
     }
 }
