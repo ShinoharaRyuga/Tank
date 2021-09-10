@@ -12,15 +12,17 @@ public class TankController : MonoBehaviour
     [SerializeField] GameObject m_bullet;
     /// <summary>アイテム取得後に飛ばす弾丸</summary>
     [SerializeField] GameObject m_bullet1;
-    /// <summary>弾数</summary>
+    /// <summary>現在の弾数</summary>
     [SerializeField] int m_bulletCount;
+    /// <summary>最大の弾数</summary>
+    [SerializeField] int m_maxBullet;
     /// <summary>Playerの移動スピード</summary>
     float m_speed = 8f;
     /// <summary>発射音</summary>
     [SerializeField] AudioClip m_sound;
     /// <summary>弾丸が回復するまでの時間</summary>
     float m_time = 0f;
-
+    /// <summary>弾数を表示するテキスト</summary>
     [SerializeField] Text m_bulletText;
     /// <summary>現在の弾丸</summary>
     Bulletkinds m_currentBullet;
@@ -30,9 +32,6 @@ public class TankController : MonoBehaviour
     GameManager m_gameManagerScript;
     private AudioSource m_audio;
 
-    
-
-    // Start is called before the first frame update
     void Start()
     {
         m_rb = GetComponent<Rigidbody>();
@@ -42,13 +41,13 @@ public class TankController : MonoBehaviour
         m_currentBullet = Bulletkinds.Usually;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (m_gameManagerScript.m_moveFlag)
         {
             Controller();
             BulletController();
+            AddBullet();
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -67,11 +66,11 @@ public class TankController : MonoBehaviour
        
         if (h != 0)
         {
-            this.transform.Rotate(this.transform.up, h * 1);
+            this.transform.Rotate(this.transform.up, h * 0.5f);
         }
 
         // 上下で前後移動する
-        Vector3 velo = this.transform.forward * m_speed * v;
+        Vector3 velo = this.transform.forward * m_speed * -v;
         m_rb.velocity = velo;
     }
 
@@ -87,8 +86,11 @@ public class TankController : MonoBehaviour
                 FireBullet(m_currentBullet);
             }
         }
+    }
 
-        if (m_bulletCount < 8)
+    public void AddBullet()
+    {
+        if (m_bulletCount < m_maxBullet)
         {
             m_time += Time.deltaTime;
 
@@ -101,7 +103,7 @@ public class TankController : MonoBehaviour
         else
         {
             m_time = 0f;
-         
+
         }
     }
 
