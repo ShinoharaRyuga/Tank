@@ -13,8 +13,8 @@ public class BulletAddForce : MonoBehaviour
     [SerializeField] float m_speed = 8f;
 
     Rigidbody rb = default;
-    private int m_reflection = 0;
-
+    int m_reflection = 0;
+    
     // Start is called before the first frame update
     void Start()
     { 
@@ -33,12 +33,13 @@ public class BulletAddForce : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
+
         }
 
         if (m_reflection > 2)
         {
             Destroy(this.gameObject);
         }
-        
+
     }
 }

@@ -78,4 +78,13 @@ public class EnemyBase : MonoBehaviour
         }
 
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            m_gameManagerScript.m_enemy--;
+            Debug.Log(m_gameManagerScript.m_enemy);
+        }
+    }
 }
