@@ -58,6 +58,14 @@ public class TankController : MonoBehaviour
         m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            m_gameManagerScript.m_failFlag = true;
+        }
+    }
+
     /// <summary>Playerの移動関数</summary>
     private void Controller()
     {

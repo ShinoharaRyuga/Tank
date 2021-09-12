@@ -29,7 +29,7 @@ public class BulletAddForce : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         m_reflection++;
-        if (collision.gameObject.tag == "Tank" || collision.gameObject.tag == "PlayerTank")
+        if (collision.gameObject.tag == "Tank" || collision.gameObject.tag == "PlayerTank" || collision.gameObject.tag == "Bullet")
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
