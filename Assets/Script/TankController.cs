@@ -55,11 +55,6 @@ public class TankController : MonoBehaviour
             AddBullet();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log(m_currentBullet);
-        }
-
         m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
     }
 
@@ -67,7 +62,7 @@ public class TankController : MonoBehaviour
     /// <param name="collision"></param>
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet" && m_gameManagerScript.m_failFlag == false && m_gameManagerScript.m_clearFlag == false)
         {
             m_gameManagerScript.m_failFlag = true;
             GameManager.m_life--;
