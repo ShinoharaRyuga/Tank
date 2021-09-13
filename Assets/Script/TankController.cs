@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Playerの戦車をコントロールする
+/// スクリプト
+/// </summary>
 public class TankController : MonoBehaviour
 {
     Rigidbody m_rb = default;
@@ -24,6 +28,7 @@ public class TankController : MonoBehaviour
     float m_time = 0f;
     /// <summary>弾数を表示するテキスト</summary>
     [SerializeField] Text m_bulletText;
+    
     /// <summary>現在の弾丸</summary>
     Bulletkinds m_currentBullet;
     public Bulletkinds CurrentBullet { get => m_currentBullet; set => m_currentBullet = value; }
@@ -58,11 +63,15 @@ public class TankController : MonoBehaviour
         m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
     }
 
+    /// <summary>Playerに弾丸が当たった時に呼ばれる　残機を減らす</summary>
+    /// <param name="collision"></param>
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
             m_gameManagerScript.m_failFlag = true;
+            GameManager.m_life--;
+            Debug.Log(GameManager.m_life);
         }
     }
 
@@ -96,6 +105,7 @@ public class TankController : MonoBehaviour
         }
     }
 
+    /// <summary>時間で弾丸が回復する関数</summary>
     public void AddBullet()
     {
         if (m_bulletCount < m_maxBullet)

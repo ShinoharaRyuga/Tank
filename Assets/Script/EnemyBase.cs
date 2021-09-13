@@ -54,17 +54,11 @@ public class EnemyBase : MonoBehaviour
 
             if (m_bulletCount > 0)
             {
-                Debug.Log("発射");
                 m_audio.PlayOneShot(m_sound);
                 Instantiate(m_bullet, m_bulletSpwan);
                 m_bulletCount--;
             }
         }
-        else
-        {
-            Debug.Log("end");
-        }
-        
     }
 
     public void AddBullet()

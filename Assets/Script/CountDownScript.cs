@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// カウントダウンの処理をする
+/// スクリプト
+/// </summary>
 public class CountDownScript : MonoBehaviour
 {
+    /// <summary>カウントダウンの時間</summary>
     [SerializeField] float m_count = 0;
+    /// <summary>ゲーム進行のスクリプト</summary>
     [SerializeField] GameManager m_gameManager;
+    /// <summary>カウントダウンを表示するテキスト</summary>
     Text m_countDownText;
 
-    // Start is called before the first frame update
     void Start()
     {
         m_countDownText = GetComponent<Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         m_count -= Time.deltaTime;
