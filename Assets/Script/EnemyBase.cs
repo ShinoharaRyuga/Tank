@@ -46,7 +46,6 @@ public class EnemyBase : MonoBehaviour
     {
         if (m_gameManagerScript.m_moveFlag && m_player != null)
         {
-            Debug.Log("hit");
             m_enemyPos = this.gameObject.transform;
             m_playerPos = m_player.GetComponent<Transform>();
             var distance = Vector3.Distance(m_playerPos.position, m_enemyPos.position);
@@ -55,15 +54,10 @@ public class EnemyBase : MonoBehaviour
 
             if (m_bulletCount > 0)
             {
-                Debug.Log("発射");
                 m_audio.PlayOneShot(m_sound);
                 Instantiate(m_bullet, m_bulletSpwan);
                 m_bulletCount--;
             }
-        }
-        else
-        {
-            Debug.Log("end");
         }
     }
 
@@ -84,7 +78,7 @@ public class EnemyBase : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             m_gameManagerScript.m_enemy--;
-            Debug.Log(m_gameManagerScript.m_enemy);
+            //Debug.Log(m_gameManagerScript.m_enemy);
         }
     }
 }

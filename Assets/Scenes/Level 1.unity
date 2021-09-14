@@ -277,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_maxBullet

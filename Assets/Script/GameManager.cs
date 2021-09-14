@@ -51,13 +51,11 @@ public class GameManager : MonoBehaviour
         //失敗判定
         if (m_failFlag && !m_clearFlag && m_life > 0)
         {
-            Debug.Log("fail");
             m_failText.gameObject.SetActive(true);
             m_moveFlag = false;
         }
         else if(m_life <= 0 && !m_clearFlag) //GAMEOVER判定
         {
-            Debug.Log("OVER");
             m_failText.text = "GAME OVER";
             m_failText.gameObject.SetActive(true);
             m_titleBackButton.SetActive(true);

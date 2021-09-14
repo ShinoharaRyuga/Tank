@@ -66,7 +66,7 @@ public class TankController : MonoBehaviour
         {
             m_gameManagerScript.m_failFlag = true;
             GameManager.m_life--;
-            Debug.Log(GameManager.m_life);
+            //Debug.Log(GameManager.m_life);
         }
     }
 

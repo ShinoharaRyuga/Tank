@@ -23,7 +23,7 @@ public class LoadSceneScript : MonoBehaviour
     /// <summary>次のステージに進む</summary>
     public void NextScene()
     {
-        Scene scene = SceneManager.GetActiveScene(); 
+        Scene scene = SceneManager.GetActiveScene();
         int i = scene.buildIndex; 
         i++;
         int j = SceneManager.sceneCountInBuildSettings;
