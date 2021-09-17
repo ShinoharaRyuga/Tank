@@ -13,21 +13,14 @@ public class Sample : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float rh = Input.GetAxis("R_Horizontal");
-        float rv = Input.GetAxis("R_Vertical");
-
-        Debug.Log("rv =" + rv);
-        Debug.Log("rh =" + rh);
-
-        if (rh != 1)
+        if (Input.GetButtonDown("Fire8"))
         {
-            
-            this.gameObject.transform.Rotate(-transform.up, 0.5f);
+            Debug.Log("PS4");
         }
 
-        if (rv != 1)
+        if (Input.GetButtonDown("XFire8"))
         {
-            this.gameObject.transform.Rotate(transform.up, 0.5f);
+            Debug.Log("Xbox");
         }
     }
 }

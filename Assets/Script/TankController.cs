@@ -20,6 +20,8 @@ public class TankController : MonoBehaviour
     [SerializeField] int m_bulletCount;
     /// <summary>最大の弾数</summary>
     [SerializeField] int m_maxBullet;
+    /// <summary>砲身がある上部</summary>
+    [SerializeField] GameObject m_upperBody;
     /// <summary>Playerの移動スピード</summary>
     float m_speed = 8f;
     /// <summary>発射音</summary>
@@ -81,9 +83,29 @@ public class TankController : MonoBehaviour
             this.transform.Rotate(this.transform.up, h * 0.5f);
         }
 
-        // 上下で前後移動する
-        Vector3 velo = this.transform.forward * m_speed * -v;
-        m_rb.velocity = velo;
+        if (Input.GetButton("Fire1"))
+        {
+            //Debug.Log("前進");
+            Vector3 velo = this.transform.forward * m_speed;
+            m_rb.velocity = velo;
+        }
+        else if (Input.GetButton("Fire5"))
+        {
+            //Debug.Log("後進");
+            Vector3 velo = -this.transform.forward * m_speed;
+            m_rb.velocity = velo;
+        }
+
+        if (Input.GetButton("Fire7"))
+        {
+            Debug.Log("右回転");
+            m_upperBody.transform.Rotate(0, 1, 0);
+        }
+        else if (Input.GetButton("Fire8"))
+        {
+            Debug.Log("左回転");
+            m_upperBody.transform.Rotate(0, -1, 0);
+        }
     }
 
     /// <summary>弾丸の発射や弾丸の回復をする関数</summary>
@@ -91,8 +113,9 @@ public class TankController : MonoBehaviour
     {
         if (m_bulletCount > 0)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire6"))
             {
+                Debug.Log("発射");
                 m_audio.PlayOneShot(m_sound);
                 m_bulletCount--;
                 FireBullet(m_currentBullet);

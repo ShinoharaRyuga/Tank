@@ -18,6 +18,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] GameObject m_upperBody;
     /// <summary>発射音</summary>
     [SerializeField] AudioClip m_sound;
+
+    [SerializeField] LayerMask m_playerMask;
     /// <summary>弾数</summary>
     int m_bulletCount = 0;
     /// <summary>移動スピード</summary>
@@ -52,11 +54,20 @@ public class EnemyBase : MonoBehaviour
             m_upperBody.transform.LookAt(m_playerPos);
             AddBullet();
 
-            if (m_bulletCount > 0)
+            Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.transform.forward);
+            RaycastHit hit;
+            Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
+            if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 15.0f, m_playerMask))
             {
+                var goName = hit.collider.gameObject.name;
+                Debug.Log(goName);
                 m_audio.PlayOneShot(m_sound);
                 Instantiate(m_bullet, m_bulletSpwan);
                 m_bulletCount--;
+            }
+            else
+            {
+                Debug.Log("NoHit");
             }
         }
     }
