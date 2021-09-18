@@ -18,10 +18,10 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] GameObject m_upperBody;
     /// <summary>発射音</summary>
     [SerializeField] AudioClip m_sound;
-
+    /// <summary>Playerのレイヤーに反応</summary>
     [SerializeField] LayerMask m_playerMask;
     /// <summary>弾数</summary>
-    int m_bulletCount = 0;
+    int m_bulletCount = 1;
     /// <summary>移動スピード</summary>
     float m_speed = 8f;
     /// <summary>弾丸が回復するまでの時間</summary>
@@ -29,7 +29,6 @@ public class EnemyBase : MonoBehaviour
 
     GameObject m_player = default;
     Transform m_playerPos = default;
-    Transform m_enemyPos = default;
     GameObject m_gameManager = default;
     GameManager m_gameManagerScript = default;
     AudioSource m_audio = default;
@@ -48,9 +47,7 @@ public class EnemyBase : MonoBehaviour
     {
         if (m_gameManagerScript.m_moveFlag && m_player != null)
         {
-            m_enemyPos = this.gameObject.transform;
             m_playerPos = m_player.GetComponent<Transform>();
-            var distance = Vector3.Distance(m_playerPos.position, m_enemyPos.position);
             m_upperBody.transform.LookAt(m_playerPos);
             AddBullet();
 
@@ -59,23 +56,24 @@ public class EnemyBase : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
             if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 15.0f, m_playerMask))
             {
-                var goName = hit.collider.gameObject.name;
-                Debug.Log(goName);
                 m_audio.PlayOneShot(m_sound);
                 Instantiate(m_bullet, m_bulletSpwan);
                 m_bulletCount--;
             }
             else
             {
-                Debug.Log("NoHit");
+                //Debug.Log("NoHit");
             }
         }
     }
 
     public void AddBullet()
     {
-        m_time += Time.deltaTime;
-
+        if (m_bulletCount != 1)
+        {
+            m_time += Time.deltaTime;
+        }
+       
         if (m_time > m_addTime)
         {
             m_bulletCount++;

@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &31454256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
+    type: 3}
+  m_PrefabInstance: {fileID: 1941727163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &81240636 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
@@ -1060,6 +1066,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_upperBody
+      value: 
+      objectReference: {fileID: 31454256}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_bulletText
       value: 
       objectReference: {fileID: 1026452678}
@@ -1070,6 +1080,10 @@ PrefabInstance:
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_gameManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_enemyMask.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 4705581872725024429, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}

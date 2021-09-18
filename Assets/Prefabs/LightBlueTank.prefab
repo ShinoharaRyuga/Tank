@@ -448,6 +448,9 @@ MonoBehaviour:
   m_addTime: 0
   m_upperBody: {fileID: 0}
   m_sound: {fileID: 0}
+  m_playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &9044900317772195363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerPos: {fileID: 0}
+  m_gameManager: {fileID: 0}
 --- !u!195 &4930350280020199713
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -607,12 +611,12 @@ PrefabInstance:
     - target: {fileID: 6392071768333892007, guid: 90cb146501a911d4684ae5f9c5b2c051,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15764065
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 6392071768333892007, guid: 90cb146501a911d4684ae5f9c5b2c051,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3494003
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 6392071768333892007, guid: 90cb146501a911d4684ae5f9c5b2c051,
         type: 3}
