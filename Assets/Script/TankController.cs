@@ -25,7 +25,7 @@ public class TankController : MonoBehaviour
     /// <summary>敵のレイヤー</summary>
     [SerializeField] LayerMask m_enemyMask;
 
-   
+    [SerializeField] SetController m_setController = default;
     /// <summary>Playerの移動スピード</summary>
     float m_speed = 8f;
     /// <summary>発射音</summary>
@@ -34,13 +34,17 @@ public class TankController : MonoBehaviour
     float m_time = 0f;
     /// <summary>弾数を表示するテキスト</summary>
     [SerializeField] Text m_bulletText;
-    
+
+    [SerializeField] Rigidbody m_rbBlue = default;
+
     /// <summary>現在の弾丸</summary>
     Bulletkinds m_currentBullet;
     public Bulletkinds CurrentBullet { get => m_currentBullet; set => m_currentBullet = value; }
 
     GameObject m_gameManager;
     GameManager m_gameManagerScript;
+
+    public int m_playerNumber = 0;
     private AudioSource m_audio;
 
     void Start()
@@ -56,9 +60,11 @@ public class TankController : MonoBehaviour
     {
         if (m_gameManagerScript.m_moveFlag)
         {
-            Controller();
+
+            PS4Controller();
             BulletController();
             AddBullet();
+
         }
 
         m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
@@ -74,7 +80,7 @@ public class TankController : MonoBehaviour
             enemyMove = parent.GetComponent<EnemyMoveScript>();
             enemyMove.m_hitRay = true;
         }
-        else if(enemyMove != null)
+        else if (enemyMove != null)
         {
             enemyMove.m_hitRay = false;
         }
@@ -93,14 +99,15 @@ public class TankController : MonoBehaviour
     }
 
     /// <summary>Playerの移動関数</summary>
-    private void Controller()
+    private void PS4Controller()
     {
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-       
+
         if (h != 0)
         {
-            this.transform.Rotate(this.transform.up, h * 0.5f);
+            this.transform.Rotate(this.transform.up, h * 1.5f);
         }
 
         if (Input.GetButton("Fire1"))
@@ -135,6 +142,22 @@ public class TankController : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire6"))
             {
+                Debug.Log("PS4");
+                Debug.Log("発射");
+                m_audio.PlayOneShot(m_sound);
+                m_bulletCount--;
+                FireBullet(m_currentBullet);
+            }
+        }
+    }
+
+    public void Xbox1BulletController()
+    {
+        if (m_bulletCount > 0)
+        {
+            if (Input.GetButtonDown("X1Xbutton"))
+            {
+                Debug.Log("Xbox");
                 Debug.Log("発射");
                 m_audio.PlayOneShot(m_sound);
                 m_bulletCount--;

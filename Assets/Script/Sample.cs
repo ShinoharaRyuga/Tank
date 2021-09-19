@@ -17,10 +17,5 @@ public class Sample : MonoBehaviour
         {
             Debug.Log("PS4");
         }
-
-        if (Input.GetButtonDown("XFire8"))
-        {
-            Debug.Log("Xbox");
-        }
     }
 }
