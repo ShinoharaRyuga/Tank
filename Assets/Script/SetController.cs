@@ -5,8 +5,10 @@ using UnityEngine;
 public class SetController : MonoBehaviour
 {
     public static int totalController = 0;
-    public MultiplayScript[] m_multiplayScripts = default;
+    [SerializeField] MultiplayScript m_multiplayScript = default;
     [SerializeField] MultiplayScript2 m_multiplayScript2 = default;
+    [SerializeField] MultiplayScript3 m_multiplayScript3 = default;
+    [SerializeField] MultiplayScript4 m_multiplayScript4 = default;
     public int[] m_playerNumbers = default;
     string[] m_controllerName;
 
@@ -19,8 +21,6 @@ public class SetController : MonoBehaviour
     void Start()
     {
         m_controllerName = Input.GetJoystickNames();
-        //Debug.Log("1" + m_controllerName[0]);
-        //Debug.Log("2" + m_controllerName[1]);
     }
 
     // Update is called once per frame
@@ -29,9 +29,9 @@ public class SetController : MonoBehaviour
         if (Input.GetButton("Fire6") && m_player1 == 0)
         {
         
-            m_multiplayScripts[0].m_playerNumber = 1;
+            m_multiplayScript.m_playerNumber = 1;
             m_player1 = 1;
-            Debug.Log("PS4");
+            Debug.Log("1P");
         }
 
         if (Input.GetButton("X1Xbutton") && m_player2 == 0)
@@ -39,7 +39,23 @@ public class SetController : MonoBehaviour
             
             m_multiplayScript2.m_playerNumber = 2;
             m_player2 = 2;
-            Debug.Log("Xbox");
+            Debug.Log("2P");
+        }
+
+        if (Input.GetButton("X2Xbutton") && m_player3 == 0)
+        {
+
+            m_multiplayScript2.m_playerNumber = 3;
+            m_player2 = 3;
+            Debug.Log("3P");
+        }
+
+        if (Input.GetButton("X3Xbutton") && m_player4 == 0)
+        {
+
+            m_multiplayScript2.m_playerNumber = 4;
+            m_player2 = 4;
+            Debug.Log("4P");
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
