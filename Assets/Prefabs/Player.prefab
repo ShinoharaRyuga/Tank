@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 733977680}
   - component: {fileID: 733977679}
   m_Layer: 0
-  m_Name: RedTank
+  m_Name: Player
   m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -537,10 +537,15 @@ MonoBehaviour:
   m_bulletSpwan: {fileID: 1055469443}
   m_bullet: {fileID: 4124186667938782307, guid: 0383cf512dc64d14e8db8eb75cff5eac,
     type: 3}
-  m_bullet1: {fileID: 0}
-  m_bulletCount: 0
-  m_maxBullet: 0
-  m_sound: {fileID: 0}
+  m_bullet1: {fileID: 4619951892029101209, guid: 07e1fc13085771c49b6546c98678b5ef,
+    type: 3}
+  m_bulletCount: 8
+  m_maxBullet: 8
+  m_upperBody: {fileID: 4705581873599201269}
+  m_enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_sound: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
   m_bulletText: {fileID: 0}
 --- !u!1001 &6392071768507487780
 PrefabInstance:

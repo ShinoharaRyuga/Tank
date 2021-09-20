@@ -24,8 +24,6 @@ public class TankController : MonoBehaviour
     [SerializeField] GameObject m_upperBody;
     /// <summary>敵のレイヤー</summary>
     [SerializeField] LayerMask m_enemyMask;
-
-    [SerializeField] SetController m_setController = default;
     /// <summary>Playerの移動スピード</summary>
     float m_speed = 8f;
     /// <summary>発射音</summary>
@@ -35,8 +33,6 @@ public class TankController : MonoBehaviour
     /// <summary>弾数を表示するテキスト</summary>
     [SerializeField] Text m_bulletText;
 
-    [SerializeField] Rigidbody m_rbBlue = default;
-
     /// <summary>現在の弾丸</summary>
     Bulletkinds m_currentBullet;
     public Bulletkinds CurrentBullet { get => m_currentBullet; set => m_currentBullet = value; }
@@ -44,8 +40,8 @@ public class TankController : MonoBehaviour
     GameObject m_gameManager;
     GameManager m_gameManagerScript;
 
-    public int m_playerNumber = 0;
     private AudioSource m_audio;
+    string[] m_controllerName = default;
 
     void Start()
     {
@@ -54,36 +50,50 @@ public class TankController : MonoBehaviour
         m_gameManager = GameObject.Find("GameManager");
         m_gameManagerScript = m_gameManager.GetComponent<GameManager>();
         m_currentBullet = Bulletkinds.Usually;
+        m_controllerName = Input.GetJoystickNames();
+        foreach (var name in m_controllerName)
+        {
+            Debug.Log(name);
+        }
     }
 
     void Update()
     {
         if (m_gameManagerScript.m_moveFlag)
         {
-
-            PS4Controller();
-            BulletController();
             AddBullet();
-
+            if (m_controllerName[0] == "" && m_controllerName[0] != "Controller" )
+            {
+                PS4Controller();
+                PS4BulletController();
+                Debug.Log("PS4");
+            }
+            else
+            {
+                XboxBulletController();
+                XboxController();
+                Debug.Log("Xbox");
+            }
+            
         }
 
         m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
 
-        Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
-        RaycastHit hit;
-        Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
-        EnemyMoveScript enemyMove = default;
-        if (Physics.Raycast(ray, out hit, 15.0f, m_enemyMask))
-        {
-            var go = hit.collider.gameObject;
-            var parent = go.transform.root;
-            enemyMove = parent.GetComponent<EnemyMoveScript>();
-            enemyMove.m_hitRay = true;
-        }
-        else if (enemyMove != null)
-        {
-            enemyMove.m_hitRay = false;
-        }
+        //Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
+        //RaycastHit hit;
+        //Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
+        //EnemyMoveScript enemyMove = default;
+        //if (Physics.Raycast(ray, out hit, 15.0f, m_enemyMask))
+        //{
+        //    var go = hit.collider.gameObject;
+        //    var parent = go.transform.root;
+        //    enemyMove = parent.GetComponent<EnemyMoveScript>();
+        //    enemyMove.m_hitRay = true;
+        //}
+        //else if (enemyMove != null)
+        //{
+        //    enemyMove.m_hitRay = false;
+        //}
     }
 
     /// <summary>Playerに弾丸が当たった時に呼ばれる　残機を減らす</summary>
@@ -135,8 +145,49 @@ public class TankController : MonoBehaviour
         }
     }
 
+    public void XboxController()
+    {
+        float xh = Input.GetAxis("X1Horizontal");
+        float xv = Input.GetAxis("X1Vertical");
+        float xLRT = Input.GetAxis("X1LRT");
+        bool rbFlag = false;
+
+        Debug.Log(xh);
+
+        if (xh != 0)
+        {
+            this.transform.Rotate(this.transform.up, xh * 1.5f);
+        }
+
+        if (Input.GetButton("X1RB"))
+        {
+            Debug.Log("hit");
+            rbFlag = true;
+            Vector3 velo = this.transform.forward * m_speed;
+            m_rb.velocity = velo;
+        }
+        
+        if (Input.GetButton("X1LB"))
+        {
+            m_upperBody.transform.Rotate(0, 1, 0);
+        }
+
+        if (xLRT > 0 && rbFlag == false)
+        {
+            Vector3 velo = -this.transform.forward * m_speed;
+            m_rb.velocity = velo;
+        }
+
+        if (xLRT < 0)
+        {
+            m_upperBody.transform.Rotate(0, -1, 0);
+        }
+
+
+    }
+
     /// <summary>弾丸の発射や弾丸の回復をする関数</summary>
-    public void BulletController()
+    public void PS4BulletController()
     {
         if (m_bulletCount > 0)
         {
@@ -151,7 +202,7 @@ public class TankController : MonoBehaviour
         }
     }
 
-    public void Xbox1BulletController()
+    public void XboxBulletController()
     {
         if (m_bulletCount > 0)
         {

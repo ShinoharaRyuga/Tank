@@ -135,12 +135,41 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 110004148}
+    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_playerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963423456604, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963494911010, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963542627238, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964076393619, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964364926330, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -201,6 +230,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueTank (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3044688964546626129, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713959944894639363, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
 --- !u!1 &110004148 stripped
@@ -208,6 +247,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3044688964364926330, guid: e09bed44e86e0224b91154c63ffd67bb,
     type: 3}
   m_PrefabInstance: {fileID: 110004147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &373365904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
+    type: 3}
+  m_PrefabInstance: {fileID: 1783033176}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &467187173
 GameObject:
@@ -428,12 +473,41 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 735314229}
+    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_playerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963423456604, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963494911010, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963542627238, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964076393619, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964364926330, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -493,6 +567,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueTank
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964546626129, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713959944894639363, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
@@ -1044,12 +1128,41 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 1751931296}
+    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_playerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963423456604, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963494911010, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963542627238, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964076393619, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964364926330, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1110,6 +1223,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueTank (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3044688964546626129, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713959944894639363, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
 --- !u!1 &1751931296 stripped
@@ -1139,6 +1262,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_upperBody
+      value: 
+      objectReference: {fileID: 373365904}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_bulletText
       value: 
       objectReference: {fileID: 1055334634}
@@ -1146,10 +1273,48 @@ PrefabInstance:
       propertyPath: m_bulletCount
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_enemyMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055469452, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705581872211760668, guid: 1f454f9864c8d2c448f8d05c827f0592,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705581872725024429, guid: 1f454f9864c8d2c448f8d05c827f0592,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705581872743379241, guid: 1f454f9864c8d2c448f8d05c827f0592,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705581872930361299, guid: 1f454f9864c8d2c448f8d05c827f0592,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4705581874024202463, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
@@ -1316,12 +1481,41 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 1944312634}
+    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_playerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963423456604, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963494911010, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688963542627238, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964076393619, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964364926330, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1381,6 +1575,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueTank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044688964546626129, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713959944894639363, guid: e09bed44e86e0224b91154c63ffd67bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}

@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 1440945401}
+    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_playerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -850,6 +854,10 @@ PrefabInstance:
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 1657059707}
+    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_playerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1044,12 +1052,20 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_upperBody
+      value: 
+      objectReference: {fileID: 1992710404}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_bulletText
       value: 
       objectReference: {fileID: 255083323}
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_bulletCount
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_enemyMask.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
@@ -1125,6 +1141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d44f1ec08c195847b7490cf5835973d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1992710404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
+    type: 3}
+  m_PrefabInstance: {fileID: 1992710402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2034013824
 PrefabInstance:
   m_ObjectHideFlags: 0
