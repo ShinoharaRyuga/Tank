@@ -772,6 +772,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
+      propertyPath: m_fireMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 1734487199}

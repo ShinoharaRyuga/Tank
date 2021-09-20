@@ -27,9 +27,6 @@ public class EnemyMoveScript : MonoBehaviour
             m_enemyPos = this.gameObject.transform;
             m_distance = Vector3.Distance(m_playerPos.position, m_enemyPos.position);
             m_agent = GetComponent<NavMeshAgent>();
-            Debug.Log(m_distance);
-            Debug.Log(m_movePattern);
-
         }
         if (m_gameManager.m_moveFlag)
         {

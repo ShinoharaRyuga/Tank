@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Sample : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private Transform targetTfm;
+
+    private RectTransform myRectTfm;
+    private Vector3 offset = new Vector3(0, 1.5f, 0);
+
     void Start()
     {
-        
+        myRectTfm = GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire8"))
-        {
-            Debug.Log("PS4");
-        }
+        myRectTfm.position
+            = RectTransformUtility.WorldToScreenPoint(Camera.main, targetTfm.position + offset);
     }
 }

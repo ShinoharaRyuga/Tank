@@ -27,6 +27,8 @@ public class EnemyBase : MonoBehaviour
     /// <summary>弾丸が回復するまでの時間</summary>
     float m_time = 0f;
 
+    [SerializeField] int m_fireMode = 0;
+
     GameObject m_player = default;
     Transform m_playerPos = default;
     GameObject m_gameManager = default;
@@ -53,22 +55,31 @@ public class EnemyBase : MonoBehaviour
             Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.transform.forward);
             RaycastHit hit;
             Debug.DrawRay(ray.origin, ray.direction * 20.0f, Color.red, 1);
-            if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 20.0f, m_playerMask))
+
+            if (m_fireMode == 1)
             {
-                var go = hit.collider.gameObject;
-                Debug.Log(go.tag);
-                if (go.tag == "PlayerTank")
+                if (m_bulletCount > 0)
                 {
                     m_audio.PlayOneShot(m_sound);
                     Instantiate(m_bullet, m_bulletSpwan);
                     m_bulletCount--;
                 }
+                
             }
-            else if (m_bulletCount > 0)
+            else if (m_fireMode == 2)
             {
-                m_audio.PlayOneShot(m_sound);
-                Instantiate(m_bullet, m_bulletSpwan);
-                m_bulletCount--;
+                Debug.Log("hit");
+                if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 20.0f, m_playerMask))
+                {
+                    var go = hit.collider.gameObject;
+                    Debug.Log(go.tag);
+                    if (go.tag == "PlayerTank")
+                    {
+                        m_audio.PlayOneShot(m_sound);
+                        Instantiate(m_bullet, m_bulletSpwan);
+                        m_bulletCount--;
+                    }
+                }
             }
         }
 
