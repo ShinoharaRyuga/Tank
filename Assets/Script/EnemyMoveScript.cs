@@ -27,7 +27,8 @@ public class EnemyMoveScript : MonoBehaviour
             m_enemyPos = this.gameObject.transform;
             m_distance = Vector3.Distance(m_playerPos.position, m_enemyPos.position);
             m_agent = GetComponent<NavMeshAgent>();
-            //Debug.Log(m_distance);
+            Debug.Log(m_distance);
+            Debug.Log(m_movePattern);
 
         }
         if (m_gameManager.m_moveFlag)
@@ -38,6 +39,7 @@ public class EnemyMoveScript : MonoBehaviour
                     m_agent.isStopped = true;
                     break;
                 case MovePattern.Chase:
+                    m_agent.isStopped = false;
                     m_agent.destination = m_playerPos.position;
                     break;
             }
@@ -50,7 +52,7 @@ public class EnemyMoveScript : MonoBehaviour
         }
        
 
-        if (m_distance >= 20)
+        if (m_distance >= 10)
         {
             m_movePattern = MovePattern.Chase;
         }

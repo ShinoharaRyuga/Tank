@@ -66,13 +66,11 @@ public class TankController : MonoBehaviour
             {
                 PS4Controller();
                 PS4BulletController();
-                Debug.Log("PS4");
             }
             else
             {
                 XboxBulletController();
                 XboxController();
-                Debug.Log("Xbox");
             }
             
         }
@@ -135,12 +133,10 @@ public class TankController : MonoBehaviour
 
         if (Input.GetButton("Fire7"))
         {
-            Debug.Log("右回転");
             m_upperBody.transform.Rotate(0, 1, 0);
         }
         else if (Input.GetButton("Fire8"))
         {
-            Debug.Log("左回転");
             m_upperBody.transform.Rotate(0, -1, 0);
         }
     }
@@ -193,8 +189,6 @@ public class TankController : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire6"))
             {
-                Debug.Log("PS4");
-                Debug.Log("発射");
                 m_audio.PlayOneShot(m_sound);
                 m_bulletCount--;
                 FireBullet(m_currentBullet);
@@ -208,8 +202,6 @@ public class TankController : MonoBehaviour
         {
             if (Input.GetButtonDown("X1Xbutton"))
             {
-                Debug.Log("Xbox");
-                Debug.Log("発射");
                 m_audio.PlayOneShot(m_sound);
                 m_bulletCount--;
                 FireBullet(m_currentBullet);

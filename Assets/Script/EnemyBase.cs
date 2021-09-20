@@ -51,14 +51,30 @@ public class EnemyBase : MonoBehaviour
             m_upperBody.transform.LookAt(m_playerPos);
             AddBullet();
             Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.transform.forward);
-            //RaycastHit hit;
-            Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
-            if (m_bulletCount > 0)
+            RaycastHit hit;
+            Debug.DrawRay(ray.origin, ray.direction * 20.0f, Color.red, 1);
+            if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 20.0f, m_playerMask))
+            {
+                var go = hit.collider.gameObject;
+                Debug.Log(go.tag);
+                if (go.tag == "PlayerTank")
+                {
+                    m_audio.PlayOneShot(m_sound);
+                    Instantiate(m_bullet, m_bulletSpwan);
+                    m_bulletCount--;
+                }
+            }
+            else if (m_bulletCount > 0)
             {
                 m_audio.PlayOneShot(m_sound);
                 Instantiate(m_bullet, m_bulletSpwan);
                 m_bulletCount--;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("弾" + m_bulletCount);
         }
     }
 
