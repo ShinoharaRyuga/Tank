@@ -8,8 +8,8 @@ public class MultiplayScript3 : MonoBehaviour
     [SerializeField] GameObject m_tankUpperBodys = default;
     Rigidbody m_rb = default;
     [SerializeField] Transform m_bulletSpwans = default;
-    [SerializeField] int m_maxBulletCounts = default;
-    [SerializeField] int m_bulletCounts = default;
+    [SerializeField] int m_maxBulletCounts = 0;
+    [SerializeField] int m_bulletCounts = 0;
     [SerializeField] GameObject m_bullet;
     [SerializeField] SetController m_setController = default;
     [SerializeField] AudioClip m_sound;
@@ -36,11 +36,22 @@ public class MultiplayScript3 : MonoBehaviour
     void Update()
     {
 
-        if (m_playerNumber == 3 && m_setController.m_player2 == 3)
+        if (m_playerNumber == 3 && m_setController.m_player3 == 3)
         {
-            Debug.Log("Xbox");
-            Xbox2BulletController();
             Xbox2Controller();
+            //Xbox2BulletController();
+            Debug.Log("Xbox2呼ばれてる");
+            if (m_bulletCounts > 0)
+            {
+                Debug.Log("弾数がある");
+                if (Input.GetButtonDown("X2Xbutton"))
+                {
+                    Debug.Log("3P発射");
+                    m_audio.PlayOneShot(m_sound);
+                    m_bulletCounts--;
+                    Instantiate(m_bullet, m_bulletSpwans);
+                }
+            }
         }
     }
 
@@ -51,7 +62,6 @@ public class MultiplayScript3 : MonoBehaviour
         float xLRT = Input.GetAxis("X2LRT");
         bool rbFlag = false;
 
-        Debug.Log(xh);
 
         if (xh != 0)
         {
@@ -60,7 +70,6 @@ public class MultiplayScript3 : MonoBehaviour
 
         if (Input.GetButton("X2RB"))
         {
-            Debug.Log("hit");
             rbFlag = true;
             Vector3 velo = this.transform.forward * m_speed;
             m_rb.velocity = velo;
@@ -92,11 +101,13 @@ public class MultiplayScript3 : MonoBehaviour
 
     public void Xbox2BulletController()
     {
+        Debug.Log("Xbox2呼ばれてる");
         if (m_bulletCounts > 0)
         {
+            Debug.Log("弾数がある");
             if (Input.GetButtonDown("X2Xbutton"))
             {
-                Debug.Log("Xboxの方");
+                Debug.Log("3P発射");
                 m_audio.PlayOneShot(m_sound);
                 m_bulletCounts--;
                 Instantiate(m_bullet, m_bulletSpwans);

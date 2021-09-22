@@ -22,8 +22,6 @@ public class TankController : MonoBehaviour
     [SerializeField] int m_maxBullet;
     /// <summary>砲身がある上部</summary>
     [SerializeField] GameObject m_upperBody;
-    /// <summary>敵のレイヤー</summary>
-    [SerializeField] LayerMask m_enemyMask;
     /// <summary>Playerの移動スピード</summary>
     float m_speed = 8f;
     /// <summary>発射音</summary>
@@ -77,21 +75,21 @@ public class TankController : MonoBehaviour
 
         m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
 
-        //Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
-        //RaycastHit hit;
-        //Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
-        //EnemyMoveScript enemyMove = default;
-        //if (Physics.Raycast(ray, out hit, 15.0f, m_enemyMask))
-        //{
-        //    var go = hit.collider.gameObject;
-        //    var parent = go.transform.root;
-        //    enemyMove = parent.GetComponent<EnemyMoveScript>();
-        //    enemyMove.m_hitRay = true;
-        //}
-        //else if (enemyMove != null)
-        //{
-        //    enemyMove.m_hitRay = false;
-        //}
+        Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
+        RaycastHit hit;
+        Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
+        EnemyMoveScript enemyMove = default;
+        if (Physics.Raycast(ray, out hit, 15.0f))
+        {
+            var go = hit.collider.gameObject;
+            var parent = go.transform.root;
+            enemyMove = parent.GetComponent<EnemyMoveScript>();
+            enemyMove.m_hitRay = true;
+        }
+        else if (enemyMove != null)
+        {
+            enemyMove.m_hitRay = false;
+        }
     }
 
     /// <summary>Playerに弾丸が当たった時に呼ばれる　残機を減らす</summary>

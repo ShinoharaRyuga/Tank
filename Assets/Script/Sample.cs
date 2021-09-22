@@ -18,6 +18,6 @@ public class Sample : MonoBehaviour
     void Update()
     {
         myRectTfm.position
-            = RectTransformUtility.WorldToScreenPoint(Camera.main, targetTfm.position + offset);
+            = RectTransformUtility.WorldToScreenPoint(Camera.main, targetTfm.position);
     }
 }

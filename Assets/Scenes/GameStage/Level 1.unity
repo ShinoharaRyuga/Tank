@@ -286,6 +286,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_fireMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_maxBullet
       value: 1
       objectReference: {fileID: 0}

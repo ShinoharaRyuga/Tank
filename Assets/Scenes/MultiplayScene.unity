@@ -846,34 +846,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260400b1f6ceb7b47acafb3f3b6c50b6, type: 3}
---- !u!1 &811332426 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3304217191356000945, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 811332425}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &811332427 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
     type: 3}
   m_PrefabInstance: {fileID: 811332425}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811332426}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7024b88168d37fd42bc174fde2655ad7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &811332428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811332426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64dc4ba9a908cc44380ac59026704497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1067618774
@@ -1211,6 +1193,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 3Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072339261000723812, guid: 8c907636cd7de4a4aa7270861619e6d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9072339261000723813, guid: 8c907636cd7de4a4aa7270861619e6d9,
         type: 3}
@@ -1771,6 +1758,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 4Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356905403132853076, guid: 044168a2813e5aa4c89ae4b25e62a04c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1356905403132853077, guid: 044168a2813e5aa4c89ae4b25e62a04c,
         type: 3}

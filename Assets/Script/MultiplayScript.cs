@@ -37,7 +37,7 @@ public class MultiplayScript : MonoBehaviour
     {
         if (m_playerNumber == 1 && m_setController.m_player1 == 1)
         {
-            //Debug.Log("PS4");
+            Debug.Log("PS4");
             PS4Controller();
             BulletController();
            

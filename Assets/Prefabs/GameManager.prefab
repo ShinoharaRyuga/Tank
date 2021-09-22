@@ -47,6 +47,8 @@ MonoBehaviour:
   m_failText: {fileID: 0}
   m_titleBackButton: {fileID: 0}
   m_tankControllerScript: {fileID: 0}
+  m_loadSceneScript: {fileID: 0}
   m_moveFlag: 0
   m_failFlag: 0
-  m_enemy: 1
+  m_enemy: 2
+  m_clearFlag: 0

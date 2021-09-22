@@ -12,7 +12,6 @@ public class SetController : MonoBehaviour
     public int[] m_playerNumbers = default;
     string[] m_controllerName;
 
-
     public int m_player1 = 0;
     public int m_player2 = 0;
     public int m_player3 = 0;
@@ -21,14 +20,24 @@ public class SetController : MonoBehaviour
     void Start()
     {
         m_controllerName = Input.GetJoystickNames();
-    }
+        Debug.Log(m_controllerName.Length);
+        foreach (var name in m_controllerName)
+        {
+            Debug.Log(name);
+            if (name != "")
+            {
+                totalController++;
+            }
+        }
+        Debug.Log("コントローラー合計 " + totalController);
 
+    }
+    
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButton("Fire6") && m_player1 == 0)
         {
-        
             m_multiplayScript.m_playerNumber = 1;
             m_player1 = 1;
             Debug.Log("1P");
@@ -42,21 +51,28 @@ public class SetController : MonoBehaviour
             Debug.Log("2P");
         }
 
-        if (Input.GetButton("X2Xbutton") && m_player3 == 0)
+        if (totalController >= 3)
         {
+            if (Input.GetButton("X2Xbutton") && m_player3 == 0)
+            {
 
-            m_multiplayScript2.m_playerNumber = 3;
-            m_player2 = 3;
-            Debug.Log("3P");
+                m_multiplayScript3.m_playerNumber = 3;
+                m_player3 = 3;
+                Debug.Log("3P");
+            }
         }
 
-        if (Input.GetButton("X3Xbutton") && m_player4 == 0)
+        if (totalController >= 4)
         {
+            if (Input.GetButton("X3Xbutton") && m_player4 == 0)
+            {
 
-            m_multiplayScript2.m_playerNumber = 4;
-            m_player2 = 4;
-            Debug.Log("4P");
+                m_multiplayScript4.m_playerNumber = 4;
+                m_player4 = 4;
+                Debug.Log("4P");
+            }
         }
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

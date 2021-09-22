@@ -7,34 +7,28 @@ using UnityEngine;
 /// </summary>
 public class EnemyBase : MonoBehaviour
 {
-    Rigidbody m_rb = default;
-    /// <summary> 弾丸の発射位置</summary>
-    [SerializeField] Transform m_bulletSpwan;
+    /// <summary>敵の種類に応じて発砲の仕方を変える</summary>
+    [SerializeField] int m_fireMode = 0;
     /// <summary>実際に飛ばす弾丸</summary>
     [SerializeField] GameObject m_bullet;
     /// <summary> 弾数が回復する時間 </summary>
     [SerializeField] float m_addTime = 0f;
-    /// <summary>砲身がある戦車の上部</summary>
-    [SerializeField] GameObject m_upperBody;
     /// <summary>発射音</summary>
     [SerializeField] AudioClip m_sound;
-    /// <summary>Playerのレイヤーに反応</summary>
-    [SerializeField] LayerMask m_playerMask;
     /// <summary>弾数</summary>
     int m_bulletCount = 0;
-    /// <summary>移動スピード</summary>
-    float m_speed = 8f;
     /// <summary>弾丸が回復するまでの時間</summary>
     float m_time = 0f;
-
-    [SerializeField] int m_fireMode = 0;
 
     GameObject m_player = default;
     Transform m_playerPos = default;
     GameObject m_gameManager = default;
     GameManager m_gameManagerScript = default;
     AudioSource m_audio = default;
-
+    /// <summary> 弾丸の発射位置</summary>
+    Transform m_bulletSpwan;
+    /// <summary>砲身がある戦車の上部</summary>
+    GameObject m_upperBody;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +36,8 @@ public class EnemyBase : MonoBehaviour
         m_audio = this.gameObject.AddComponent<AudioSource>();
         m_gameManager = GameObject.Find("GameManager");
         m_gameManagerScript = m_gameManager.GetComponent<GameManager>();
+        m_upperBody = transform.GetChild(0).gameObject;
+        m_bulletSpwan = m_upperBody.transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -54,7 +50,7 @@ public class EnemyBase : MonoBehaviour
             AddBullet();
             Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.transform.forward);
             RaycastHit hit;
-            Debug.DrawRay(ray.origin, ray.direction * 20.0f, Color.red, 1);
+            Debug.DrawRay(ray.origin, ray.direction * 30.0f, Color.red, 1);
 
             if (m_fireMode == 1)
             {
@@ -64,15 +60,15 @@ public class EnemyBase : MonoBehaviour
                     Instantiate(m_bullet, m_bulletSpwan);
                     m_bulletCount--;
                 }
-                
+
             }
             else if (m_fireMode == 2)
             {
                 Debug.Log("hit");
-                if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 20.0f, m_playerMask))
+                if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 30.0f))
                 {
                     var go = hit.collider.gameObject;
-                    Debug.Log(go.tag);
+                    Debug.Log(go.name);
                     if (go.tag == "PlayerTank")
                     {
                         m_audio.PlayOneShot(m_sound);
@@ -95,7 +91,7 @@ public class EnemyBase : MonoBehaviour
         {
             m_time += Time.deltaTime;
         }
-       
+
         if (m_time > m_addTime)
         {
             m_bulletCount++;
@@ -109,7 +105,6 @@ public class EnemyBase : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             m_gameManagerScript.m_enemy--;
-            //Debug.Log(m_gameManagerScript.m_enemy);
         }
     }
 }

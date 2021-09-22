@@ -36,7 +36,7 @@ public class MultiplayScript4 : MonoBehaviour
     void Update()
     {
 
-        if (m_playerNumber == 4 && m_setController.m_player2 == 4)
+        if (m_playerNumber == 4 && m_setController.m_player4 == 4)
         {
             Debug.Log("Xbox");
             Xbox3BulletController();
