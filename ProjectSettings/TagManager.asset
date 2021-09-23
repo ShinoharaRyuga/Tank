@@ -7,6 +7,7 @@ TagManager:
   - Tank
   - PlayerTank
   - Bullet
+  - Break
   layers:
   - Default
   - TransparentFX

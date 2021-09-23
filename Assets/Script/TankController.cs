@@ -162,7 +162,7 @@ public class TankController : MonoBehaviour
         
         if (Input.GetButton("X1LB"))
         {
-            m_upperBody.transform.Rotate(0, 1, 0);
+            m_upperBody.transform.Rotate(0, 0.3f, 0);
         }
 
         if (xLRT > 0 && rbFlag == false)
@@ -173,7 +173,7 @@ public class TankController : MonoBehaviour
 
         if (xLRT < 0)
         {
-            m_upperBody.transform.Rotate(0, -1, 0);
+            m_upperBody.transform.Rotate(0, -0.3f, 0);
         }
 
 
@@ -273,6 +273,24 @@ public class TankController : MonoBehaviour
         yield return new WaitForSeconds(0.07f);
         Instantiate(m_bullet, m_bulletSpwan);
         m_audio.PlayOneShot(m_sound);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Break")
+        {
+            m_speed = 4f;
+            Debug.Log("Enter");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Break")
+        {
+            m_speed = 8f;
+            Debug.Log("Exit");
+        }
     }
 }
 
