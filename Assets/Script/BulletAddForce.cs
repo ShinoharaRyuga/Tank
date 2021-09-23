@@ -12,6 +12,8 @@ public class BulletAddForce : MonoBehaviour
     /// <summary>弾が飛ぶ速さ</summary>
     [SerializeField] float m_speed = 8f;
 
+    [SerializeField] int m_bulletMode = 0;
+
     Rigidbody rb = default;
     int m_reflection = 0;
     
@@ -28,18 +30,25 @@ public class BulletAddForce : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        m_reflection++;
         if (collision.gameObject.tag == "Tank" || collision.gameObject.tag == "PlayerTank" || collision.gameObject.tag == "Bullet")
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
-
         }
 
-        if (m_reflection > 2)
+        if (m_bulletMode == 1)
+        {
+            m_reflection++;
+            if (m_reflection > 2)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        else if (m_bulletMode == 2)
         {
             Destroy(this.gameObject);
         }
+       
 
     }
 }

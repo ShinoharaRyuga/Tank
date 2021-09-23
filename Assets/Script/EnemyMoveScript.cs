@@ -7,6 +7,7 @@ public class EnemyMoveScript : MonoBehaviour
 {
     [SerializeField] Transform m_playerPos;
     [SerializeField] GameManager m_gameManager = default;
+    [SerializeField] float m_mindistance = 0.0f;
 
     private MovePattern m_movePattern = MovePattern.Idle;
     float m_distance = 0.0f;
@@ -49,7 +50,7 @@ public class EnemyMoveScript : MonoBehaviour
         }
        
 
-        if (m_distance >= 10)
+        if (m_distance >= m_mindistance)
         {
             m_movePattern = MovePattern.Chase;
         }

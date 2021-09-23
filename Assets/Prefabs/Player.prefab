@@ -542,9 +542,6 @@ MonoBehaviour:
   m_bulletCount: 8
   m_maxBullet: 8
   m_upperBody: {fileID: 4705581873599201269}
-  m_enemyMask:
-    serializedVersion: 2
-    m_Bits: 0
   m_sound: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
   m_bulletText: {fileID: 0}
 --- !u!1001 &6392071768507487780
