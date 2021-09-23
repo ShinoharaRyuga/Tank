@@ -148,8 +148,6 @@ public class TankController : MonoBehaviour
         float xLRT = Input.GetAxis("X1LRT");
         bool rbFlag = false;
 
-        Debug.Log(xh);
-
         if (xh != 0)
         {
             this.transform.Rotate(this.transform.up, xh * 1.5f);
@@ -157,7 +155,6 @@ public class TankController : MonoBehaviour
 
         if (Input.GetButton("X1RB"))
         {
-            Debug.Log("hit");
             rbFlag = true;
             Vector3 velo = this.transform.forward * m_speed;
             m_rb.velocity = velo;

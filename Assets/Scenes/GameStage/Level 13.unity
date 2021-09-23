@@ -141,6 +141,10 @@ PrefabInstance:
       propertyPath: m_fireMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_addTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder

@@ -7,15 +7,13 @@ using UnityEngine;
 /// </summary>
 public class EnemyBase : MonoBehaviour
 {
-    /// <summary>敵の種類に応じて発砲の仕方を変える</summary>
     [SerializeField] int m_fireMode = 0;
-    /// <summary>実際に飛ばす弾丸</summary>
-    [SerializeField] GameObject m_bullet;
     /// <summary> 弾数が回復する時間 </summary>
     [SerializeField] float m_addTime = 0f;
     /// <summary>発射音</summary>
     [SerializeField] AudioClip m_sound;
-
+    /// <summary>実際に飛ばす弾丸</summary>
+    [SerializeField] GameObject m_bullet;
     [SerializeField] bool m_lookFlag = true;
     /// <summary>弾数</summary>
     int m_bulletCount = 0;
@@ -31,6 +29,9 @@ public class EnemyBase : MonoBehaviour
     Transform m_bulletSpwan;
     /// <summary>砲身がある戦車の上部</summary>
     GameObject m_upperBody;
+
+    public Transform BulletSpwan { get => m_bulletSpwan; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,28 +49,25 @@ public class EnemyBase : MonoBehaviour
         if (m_gameManagerScript.m_moveFlag && m_player != null)
         {
             m_playerPos = m_player.GetComponent<Transform>();
+
             if (m_lookFlag)
             {
                 m_upperBody.transform.LookAt(m_playerPos);
             }
-            AddBullet();
-            Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.transform.forward);
-            RaycastHit hit;
-            Debug.DrawRay(ray.origin, ray.direction * 30.0f, Color.red, 1);
 
             if (m_fireMode == 1)
             {
                 if (m_bulletCount > 0)
                 {
                     m_audio.PlayOneShot(m_sound);
-                    Instantiate(m_bullet, m_bulletSpwan);
+                    Instantiate(m_bullet, BulletSpwan);
                     m_bulletCount--;
                 }
-
             }
             else if (m_fireMode == 2)
             {
-                Debug.Log("hit");
+                Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
+                RaycastHit hit;
                 if (m_bulletCount > 0 && Physics.Raycast(ray, out hit, 30.0f))
                 {
                     var go = hit.collider.gameObject;
@@ -77,16 +75,14 @@ public class EnemyBase : MonoBehaviour
                     if (go.tag == "PlayerTank")
                     {
                         m_audio.PlayOneShot(m_sound);
-                        Instantiate(m_bullet, m_bulletSpwan);
+                        Instantiate(m_bullet, BulletSpwan);
                         m_bulletCount--;
                     }
                 }
             }
-        }
+            
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("弾" + m_bulletCount);
+            AddBullet();
         }
     }
 

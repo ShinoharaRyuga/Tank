@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: m_playerMask.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_addTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -865,6 +869,10 @@ PrefabInstance:
     - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_playerMask.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_addTime
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
