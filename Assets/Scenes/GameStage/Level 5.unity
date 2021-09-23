@@ -545,6 +545,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
         type: 3}
+      propertyPath: m_enemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
+        type: 3}
       propertyPath: m_failText
       value: 
       objectReference: {fileID: 1121706253}

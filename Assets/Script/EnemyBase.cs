@@ -15,6 +15,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] float m_addTime = 0f;
     /// <summary>発射音</summary>
     [SerializeField] AudioClip m_sound;
+
+    [SerializeField] bool m_lookFlag = true;
     /// <summary>弾数</summary>
     int m_bulletCount = 0;
     /// <summary>弾丸が回復するまでの時間</summary>
@@ -46,7 +48,10 @@ public class EnemyBase : MonoBehaviour
         if (m_gameManagerScript.m_moveFlag && m_player != null)
         {
             m_playerPos = m_player.GetComponent<Transform>();
-            m_upperBody.transform.LookAt(m_playerPos);
+            if (m_lookFlag)
+            {
+                m_upperBody.transform.LookAt(m_playerPos);
+            }
             AddBullet();
             Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.transform.forward);
             RaycastHit hit;
