@@ -30,8 +30,6 @@ public class EnemyBase : MonoBehaviour
     /// <summary>砲身がある戦車の上部</summary>
     GameObject m_upperBody;
 
-    public Transform BulletSpwan { get => m_bulletSpwan; }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +58,7 @@ public class EnemyBase : MonoBehaviour
                 if (m_bulletCount > 0)
                 {
                     m_audio.PlayOneShot(m_sound);
-                    Instantiate(m_bullet, BulletSpwan);
+                    Instantiate(m_bullet, m_bulletSpwan);
                     m_bulletCount--;
                 }
             }
@@ -75,9 +73,21 @@ public class EnemyBase : MonoBehaviour
                     if (go.tag == "PlayerTank")
                     {
                         m_audio.PlayOneShot(m_sound);
-                        Instantiate(m_bullet, BulletSpwan);
+                        Instantiate(m_bullet, m_bulletSpwan);
                         m_bulletCount--;
                     }
+                }
+            }
+            else if (m_fireMode == 3)
+            {
+                if (m_upperBody.transform.GetChild(1) != null && m_bulletCount > 0)
+                {
+                    Transform bulletSpwan = m_upperBody.transform.GetChild(1);
+                    Instantiate(m_bullet, m_bulletSpwan);
+                    Instantiate(m_bullet, bulletSpwan);
+                    m_audio.PlayOneShot(m_sound);
+                    m_bulletCount--;
+
                 }
             }
             
