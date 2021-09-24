@@ -162,7 +162,7 @@ public class TankController : MonoBehaviour
         
         if (Input.GetButton("X1LB"))
         {
-            m_upperBody.transform.Rotate(0, 0.3f, 0);
+            m_upperBody.transform.Rotate(0, 0.5f, 0);
         }
 
         if (xLRT > 0 && rbFlag == false)
@@ -173,7 +173,7 @@ public class TankController : MonoBehaviour
 
         if (xLRT < 0)
         {
-            m_upperBody.transform.Rotate(0, -0.3f, 0);
+            m_upperBody.transform.Rotate(0, -0.5f, 0);
         }
 
 
