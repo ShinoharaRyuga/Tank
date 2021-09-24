@@ -536,11 +536,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fireMode: 1
-  m_addTime: 0
+  m_addTime: 4
   m_sound: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
   m_bullet: {fileID: 4124186667938782307, guid: 0383cf512dc64d14e8db8eb75cff5eac,
     type: 3}
   m_lookFlag: 1
+  m_player: {fileID: 0}
+  m_gameManagerScript: {fileID: 0}
 --- !u!65 &1917560113
 BoxCollider:
   m_ObjectHideFlags: 0

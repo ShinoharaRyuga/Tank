@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4705581872211760671}
   - component: {fileID: 4705581872211760670}
   - component: {fileID: 4705581872211760669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,9 +106,9 @@ GameObject:
   - component: {fileID: 4705581872725024424}
   - component: {fileID: 4705581872725024431}
   - component: {fileID: 4705581872725024430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel2
-  m_TagString: Untagged
+  m_TagString: PlayerTank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,9 +200,9 @@ GameObject:
   - component: {fileID: 4705581872743379236}
   - component: {fileID: 4705581872743379243}
   - component: {fileID: 4705581872743379242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowerBody
-  m_TagString: Untagged
+  m_TagString: PlayerTank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,9 +293,9 @@ GameObject:
   - component: {fileID: 4705581872930361294}
   - component: {fileID: 4705581872930361293}
   - component: {fileID: 4705581872930361292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel1
-  m_TagString: Untagged
+  m_TagString: PlayerTank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,9 +387,9 @@ GameObject:
   - component: {fileID: 4705581873599201264}
   - component: {fileID: 4705581873599201271}
   - component: {fileID: 4705581873599201270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpperBody
-  m_TagString: Untagged
+  m_TagString: PlayerTank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,9 +481,9 @@ GameObject:
   - component: {fileID: 4705581874024202463}
   - component: {fileID: 733977680}
   - component: {fileID: 733977679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Tank
+  m_TagString: PlayerTank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,16 +534,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d44f1ec08c195847b7490cf5835973d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_bulletSpwan: {fileID: 1055469443}
   m_bullet: {fileID: 4124186667938782307, guid: 0383cf512dc64d14e8db8eb75cff5eac,
     type: 3}
   m_bullet1: {fileID: 4619951892029101209, guid: 07e1fc13085771c49b6546c98678b5ef,
     type: 3}
   m_bulletCount: 8
   m_maxBullet: 8
-  m_upperBody: {fileID: 4705581873599201269}
   m_sound: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
   m_bulletText: {fileID: 0}
+  m_gameManagerScript: {fileID: 0}
 --- !u!1001 &6392071768507487780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -625,6 +624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BulletSpwan
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392071768333892008, guid: 90cb146501a911d4684ae5f9c5b2c051,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90cb146501a911d4684ae5f9c5b2c051, type: 3}

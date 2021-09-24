@@ -20,10 +20,10 @@ public class EnemyBase : MonoBehaviour
     /// <summary>弾丸が回復するまでの時間</summary>
     float m_time = 0f;
 
-    GameObject m_player = default;
+    
     Transform m_playerPos = default;
-    GameObject m_gameManager = default;
-    GameManager m_gameManagerScript = default;
+    [SerializeField] GameObject m_player = default;
+    [SerializeField] GameManager m_gameManagerScript = default;
     AudioSource m_audio = default;
     /// <summary> 弾丸の発射位置</summary>
     Transform m_bulletSpwan;
@@ -33,10 +33,8 @@ public class EnemyBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_player = GameObject.Find("Player");
+        m_playerPos = m_player.transform;
         m_audio = this.gameObject.AddComponent<AudioSource>();
-        m_gameManager = GameObject.Find("GameManager");
-        m_gameManagerScript = m_gameManager.GetComponent<GameManager>();
         m_upperBody = transform.GetChild(0).gameObject;
         m_bulletSpwan = m_upperBody.transform.GetChild(0);
     }

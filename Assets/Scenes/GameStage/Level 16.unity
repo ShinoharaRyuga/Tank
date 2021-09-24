@@ -312,6 +312,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1279758703}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
       propertyPath: m_addTime
       value: 6
       objectReference: {fileID: 0}
@@ -320,6 +325,11 @@ PrefabInstance:
       propertyPath: m_fireMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 655964575}
     - target: {fileID: 8671251866569572716, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
       propertyPath: m_RootOrder
@@ -501,9 +511,17 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1279758703}
+    - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
       propertyPath: m_addTime
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 655964575}
     - target: {fileID: 1676630708814621326, guid: 963452fee3b2db64091612750f6109ff,
         type: 3}
       propertyPath: m_Name
@@ -586,9 +604,17 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1279758703}
+    - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
       propertyPath: m_addTime
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 655964575}
     - target: {fileID: 1676630708814621326, guid: 963452fee3b2db64091612750f6109ff,
         type: 3}
       propertyPath: m_Name
@@ -1188,6 +1214,10 @@ PrefabInstance:
       propertyPath: m_enemyMask.m_Bits
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 655964575}
     - target: {fileID: 1055469452, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1320,7 +1350,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1279758700}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1279758703}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d44f1ec08c195847b7490cf5835973d, type: 3}
@@ -1329,6 +1359,12 @@ MonoBehaviour:
 --- !u!1 &1279758702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
+    type: 3}
+  m_PrefabInstance: {fileID: 1279758700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1279758703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
     type: 3}
   m_PrefabInstance: {fileID: 1279758700}
   m_PrefabAsset: {fileID: 0}
@@ -1669,6 +1705,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1279758703}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
       propertyPath: m_addTime
       value: 6
       objectReference: {fileID: 0}
@@ -1677,6 +1718,11 @@ PrefabInstance:
       propertyPath: m_fireMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 655964575}
     - target: {fileID: 8671251866569572716, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
       propertyPath: m_RootOrder

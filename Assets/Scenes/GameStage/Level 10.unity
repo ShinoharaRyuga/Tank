@@ -325,6 +325,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1197442122}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
       propertyPath: m_addTime
       value: 6
       objectReference: {fileID: 0}
@@ -338,6 +343,11 @@ PrefabInstance:
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 673315090}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 1327536733}
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
       propertyPath: m_playerMask.m_Bits
@@ -449,6 +459,10 @@ PrefabInstance:
       value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1197442122}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
       value: 5
       objectReference: {fileID: 0}
@@ -456,6 +470,10 @@ PrefabInstance:
       propertyPath: m_lookFlag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 1327536733}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -637,9 +655,17 @@ PrefabInstance:
       value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1197442122}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 1327536733}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -939,6 +965,10 @@ PrefabInstance:
       propertyPath: m_enemyMask.m_Bits
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 1327536733}
     - target: {fileID: 1055469452, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1071,7 +1101,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1197442118}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1197442122}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d44f1ec08c195847b7490cf5835973d, type: 3}
@@ -1086,6 +1116,12 @@ GameObject:
 --- !u!4 &1197442121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4705581874024202463, guid: 1f454f9864c8d2c448f8d05c827f0592,
+    type: 3}
+  m_PrefabInstance: {fileID: 1197442118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1197442122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
     type: 3}
   m_PrefabInstance: {fileID: 1197442118}
   m_PrefabAsset: {fileID: 0}
@@ -1462,9 +1498,17 @@ PrefabInstance:
       value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1197442122}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 1327536733}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1678,9 +1722,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1861350631}
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1197442122}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 1327536733}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1763,6 +1815,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1197442122}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
       propertyPath: m_addTime
       value: 6
       objectReference: {fileID: 0}
@@ -1776,6 +1833,11 @@ PrefabInstance:
       propertyPath: m_upperBody
       value: 
       objectReference: {fileID: 1972573998}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 1327536733}
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
       propertyPath: m_playerMask.m_Bits

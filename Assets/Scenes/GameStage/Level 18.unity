@@ -205,6 +205,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 246697172}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
       propertyPath: m_addTime
       value: 4
       objectReference: {fileID: 0}
@@ -213,6 +218,11 @@ PrefabInstance:
       propertyPath: m_fireMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5915075526709678038, guid: 351712f1893c8c9419e86fa11f91177e,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 621806061}
     - target: {fileID: 8671251866569572716, guid: 351712f1893c8c9419e86fa11f91177e,
         type: 3}
       propertyPath: m_RootOrder
@@ -343,6 +353,10 @@ PrefabInstance:
       propertyPath: m_enemyMask.m_Bits
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 621806061}
     - target: {fileID: 1055469452, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -475,7 +489,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 246697168}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 246697172}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d44f1ec08c195847b7490cf5835973d, type: 3}
@@ -490,6 +504,12 @@ GameObject:
 --- !u!4 &246697171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4705581874024202463, guid: 1f454f9864c8d2c448f8d05c827f0592,
+    type: 3}
+  m_PrefabInstance: {fileID: 246697168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &246697172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
     type: 3}
   m_PrefabInstance: {fileID: 246697168}
   m_PrefabAsset: {fileID: 0}
@@ -783,9 +803,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 246697172}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 621806061}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1026,9 +1054,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 246697172}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_addTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 621806061}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1440,9 +1476,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
         type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 246697172}
+    - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
+        type: 3}
       propertyPath: m_addTime
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 621806061}
     - target: {fileID: 6256155541505446074, guid: 7e37501039306984aba27778a0adfae3,
         type: 3}
       propertyPath: m_Name
@@ -1524,6 +1570,14 @@ PrefabInstance:
       propertyPath: m_mindistance
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 246697172}
+    - target: {fileID: 1558546648, guid: 963452fee3b2db64091612750f6109ff, type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 621806061}
     - target: {fileID: 1558546649, guid: 963452fee3b2db64091612750f6109ff, type: 3}
       propertyPath: m_AngularSpeed
       value: 50

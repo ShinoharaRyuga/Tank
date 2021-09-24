@@ -242,9 +242,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
         type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1193754452}
+    - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
+        type: 3}
       propertyPath: m_addTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 184432817}
     - target: {fileID: 6256155541505446074, guid: 7e37501039306984aba27778a0adfae3,
         type: 3}
       propertyPath: m_Name
@@ -876,119 +886,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_life
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_sound
-      value: 
-      objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_bullet
-      value: 
-      objectReference: {fileID: 4124186667938782307, guid: 0383cf512dc64d14e8db8eb75cff5eac,
-        type: 3}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_bullet1
-      value: 
-      objectReference: {fileID: 4619951892029101209, guid: 07e1fc13085771c49b6546c98678b5ef,
-        type: 3}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_maxBullet
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_upperBody
-      value: 
-      objectReference: {fileID: 1193754452}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
       propertyPath: m_bulletText
       value: 
       objectReference: {fileID: 1677719254}
     - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_bulletCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_gameManager
+      propertyPath: m_gameManagerScript
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 733977679, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_enemyMask.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 1055469452, guid: 1f454f9864c8d2c448f8d05c827f0592, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872211760668, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872725024429, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872725024429, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872725024429, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerTank
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872743379241, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872743379241, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerTank
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872930361299, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581872930361299, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerTank
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerTank
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 184432817}
     - target: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerTank
       objectReference: {fileID: 0}
     - target: {fileID: 4705581874024202463, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
@@ -1053,7 +961,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1193754450}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1193754452}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d44f1ec08c195847b7490cf5835973d, type: 3}
@@ -1061,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!1 &1193754452 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4705581873599201269, guid: 1f454f9864c8d2c448f8d05c827f0592,
+  m_CorrespondingSourceObject: {fileID: 4705581874024202462, guid: 1f454f9864c8d2c448f8d05c827f0592,
     type: 3}
   m_PrefabInstance: {fileID: 1193754450}
   m_PrefabAsset: {fileID: 0}
@@ -1077,6 +985,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
+        type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1193754452}
+    - target: {fileID: 3513075653907820058, guid: 7e37501039306984aba27778a0adfae3,
+        type: 3}
+      propertyPath: m_gameManagerScript
+      value: 
+      objectReference: {fileID: 184432817}
     - target: {fileID: 6256155541505446074, guid: 7e37501039306984aba27778a0adfae3,
         type: 3}
       propertyPath: m_Name

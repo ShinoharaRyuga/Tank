@@ -35,8 +35,8 @@ public class TankController : MonoBehaviour
     Bulletkinds m_currentBullet;
     public Bulletkinds CurrentBullet { get => m_currentBullet; set => m_currentBullet = value; }
 
-    GameObject m_gameManager;
-    GameManager m_gameManagerScript;
+   
+   [SerializeField] GameManager m_gameManagerScript;
 
     private AudioSource m_audio;
     string[] m_controllerName = default;
@@ -45,8 +45,6 @@ public class TankController : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody>();
         m_audio = this.gameObject.AddComponent<AudioSource>();
-        m_gameManager = GameObject.Find("GameManager");
-        m_gameManagerScript = m_gameManager.GetComponent<GameManager>();
         m_currentBullet = Bulletkinds.Usually;
         m_controllerName = Input.GetJoystickNames();
         m_upperBody = transform.GetChild(0).gameObject;
