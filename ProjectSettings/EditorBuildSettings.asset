@@ -53,4 +53,64 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameStage/Level 15.unity
     guid: 7b35a82e74e41db45a3ab91369348776
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 16.unity
+    guid: e9b2a1427dd8ceb47ad092760564aff7
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 17.unity
+    guid: bb56c1b811e48aa4eaf2ac63b70279e7
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 18.unity
+    guid: 2bb85b7013c2fa44d8f0ef8ec982d767
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 19.unity
+    guid: 11fdaa1b83f458940be4d594214382e9
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 20.unity
+    guid: 8382eaa0e4420d84bb9f0692c2078889
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 21.unity
+    guid: 4a9702f1cdc2f3749bd81e7f673c0872
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 22.unity
+    guid: e1ba72797dc791744b10211a9b189bd0
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 23.unity
+    guid: e0f5c98d323995b45b88480f6e5d1e3a
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 24.unity
+    guid: 2de065a3da844eb4b832f842f366b09b
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 25.unity
+    guid: a5e4008c8485fd843865f5d86d34bfba
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 26.unity
+    guid: 2feec2e64db7f574fafe2fca89698631
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 27.unity
+    guid: 5e4d0b0a2bb94734b81dd47d48836c6a
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 28.unity
+    guid: f33319faef23adb45be9dd7368bab04b
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 29.unity
+    guid: b237826019873354284bb052765508ad
+  - enabled: 1
+    path: Assets/Scenes/GameStage/Level 30.unity
+    guid: 843d52ada9412e649a9373f353bd39ac
+  - enabled: 1
+    path: Assets/Scenes/MultiplayScene/Stage 1.unity
+    guid: 1aa22f2d127db3a4181f9d11c66a3089
+  - enabled: 1
+    path: Assets/Scenes/MultiplayScene/Stage 2.unity
+    guid: 4b2ffecddb2aafb49abda513c6ddfb6c
+  - enabled: 1
+    path: Assets/Scenes/MultiplayScene/Stage 3.unity
+    guid: 07119f5331f8a8e47a24dccfc3659970
+  - enabled: 1
+    path: Assets/Scenes/MultiplayScene/Stage 4.unity
+    guid: 55a239cc0973d6a49ab6065af6147a4a
+  - enabled: 1
+    path: Assets/Scenes/MultiplayScene/Stage 5.unity
+    guid: c323fc75d2d45c94a914ca78871b858e
   m_configObjects: {}
