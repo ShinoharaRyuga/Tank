@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3304217191356000948}
   - component: {fileID: 3304217191356000950}
+  - component: {fileID: 8858774881312219922}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,8 +48,23 @@ MonoBehaviour:
   m_failText: {fileID: 0}
   m_titleBackButton: {fileID: 0}
   m_tankControllerScript: {fileID: 0}
-  m_loadSceneScript: {fileID: 0}
+  m_countScript: {fileID: 0}
+  m_stageText: {fileID: 0}
+  m_enemyText: {fileID: 0}
   m_moveFlag: 0
   m_failFlag: 0
   m_enemy: 2
+  m_life: 3
   m_clearFlag: 0
+--- !u!114 &8858774881312219922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304217191356000945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3d2457e7afb2e4383535234c4aa700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

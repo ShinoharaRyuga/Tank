@@ -16,14 +16,23 @@ public class CountDownScript : MonoBehaviour
     /// <summary>カウントダウンを表示するテキスト</summary>
     Text m_countDownText;
 
-    [SerializeField] TimerScript m_timer = default;
+    public bool m_countFlag = false;
 
     void Start()
     {
         m_countDownText = GetComponent<Text>();
+        m_countDownText.text = "";
     }
 
     void Update()
+    {
+        if (m_countFlag)
+        {
+            CountStart();
+        }
+    }
+
+    public void CountStart()
     {
         m_count -= Time.deltaTime;
 
@@ -34,7 +43,6 @@ public class CountDownScript : MonoBehaviour
         {
             m_countDownText.text = "スタート！！";
             m_gameManager.m_moveFlag = true;
-            m_timer.m_timerFlag = true;
         }
 
         if (m_count <= -1)

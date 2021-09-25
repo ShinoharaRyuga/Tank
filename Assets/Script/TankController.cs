@@ -73,23 +73,13 @@ public class TankController : MonoBehaviour
             
         }
 
-        m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
+        if (Input.GetButton("X1Start"))
+        {
+            Debug.Log("タイトル");
+            m_gameManagerScript.TitleBack();
+        }
 
-        //Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
-        //RaycastHit hit;
-        //Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
-        //EnemyMoveScript enemyMove = default;
-        //if (Physics.Raycast(ray, out hit, 15.0f))
-        //{
-        //    var go = hit.collider.gameObject;
-        //    var parent = go.transform.root;
-        //    enemyMove = parent.GetComponent<EnemyMoveScript>();
-        //    enemyMove.m_hitRay = true;
-        //}
-        //else if (enemyMove != null)
-        //{
-        //    enemyMove.m_hitRay = false;
-        //}
+        m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
     }
 
     /// <summary>Playerに弾丸が当たった時に呼ばれる　残機を減らす</summary>
@@ -113,7 +103,7 @@ public class TankController : MonoBehaviour
 
         if (h != 0)
         {
-            this.transform.Rotate(this.transform.up, h * 1.5f);
+            this.transform.Rotate(this.transform.up, h * 1f);
         }
 
         if (Input.GetButton("Fire1"))
@@ -148,7 +138,7 @@ public class TankController : MonoBehaviour
 
         if (xh != 0)
         {
-            this.transform.Rotate(this.transform.up, xh * 1.5f);
+            this.transform.Rotate(this.transform.up, xh * 1f);
         }
 
         if (Input.GetButton("X1RB"))
@@ -303,3 +293,19 @@ public enum Bulletkinds
     Double
 
 }
+
+//Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
+//RaycastHit hit;
+//Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
+//EnemyMoveScript enemyMove = default;
+//if (Physics.Raycast(ray, out hit, 15.0f))
+//{
+//    var go = hit.collider.gameObject;
+//    var parent = go.transform.root;
+//    enemyMove = parent.GetComponent<EnemyMoveScript>();
+//    enemyMove.m_hitRay = true;
+//}
+//else if (enemyMove != null)
+//{
+//    enemyMove.m_hitRay = false;
+//}

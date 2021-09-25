@@ -7,10 +7,17 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class LoadSceneScript : MonoBehaviour
 {
+    public int m_sceneIndex = 0;
+
+    private void Start()
+    {
+        m_sceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
     /// <summary>タイトルに戻る</summary>
     public void TitleBack()
     {
         SceneManager.LoadScene("Title");
+        GameManager.m_life = 3;
     }
 
     /// <summary>リプレイ</summary>
@@ -32,5 +39,10 @@ public class LoadSceneScript : MonoBehaviour
         {
             SceneManager.LoadScene(i); // 次のシーンに進む
         }
+    }
+
+    public void TrainingScene()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
