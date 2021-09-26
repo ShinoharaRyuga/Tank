@@ -9,14 +9,17 @@ public class MultiPlayDangerous : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerTank")
         {
+            m_gameManager.m_endFlag = true;
             var go = collision.gameObject.name;
             if (go == "1Player")
             {
                 m_gameManager.m_result = 2;
+               
             }
             else if (go == "2Player")
             {
                 m_gameManager.m_result = 1;
+                
             }
             Destroy(collision.gameObject);
             Destroy(this.gameObject);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2408115065728973299}
   - component: {fileID: 2408115065728973298}
   - component: {fileID: 2408115065728973297}
+  - component: {fileID: 1761097946}
   m_Layer: 0
   m_Name: MultiPlayManager
   m_TagString: Untagged
@@ -45,12 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_resultText: {fileID: 0}
-  m_titleBack: {fileID: 0}
-  m_rePlay: {fileID: 0}
   m_countScript: {fileID: 0}
   m_moveFlag: 0
   m_result: 0
   m_readyCount: 0
+  m_endFlag: 0
 --- !u!114 &2408115065728973297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,3 +70,16 @@ MonoBehaviour:
   m_player2: 0
   m_player3: 0
   m_player4: 0
+--- !u!114 &1761097946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2408115065728973296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3d2457e7afb2e4383535234c4aa700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sceneIndex: 0

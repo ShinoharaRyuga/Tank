@@ -1,21 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-/// <summary>
-/// Playerの戦車をコントロールする
-/// スクリプト
-/// </summary>
-public class TankController : MonoBehaviour
+public class TrainingTank : MonoBehaviour
 {
     Rigidbody m_rb = default;
     /// <summary> 弾丸の発射位置</summary>
     Transform m_bulletSpwan;
     /// <summary>実際に飛ばす弾丸</summary>
     [SerializeField] GameObject m_bullet;
-    /// <summary>アイテム取得後に飛ばす弾丸</summary>
-    [SerializeField] GameObject m_bullet1;
     /// <summary>現在の弾数</summary>
     [SerializeField] int m_bulletCount;
     /// <summary>最大の弾数</summary>
@@ -28,15 +21,13 @@ public class TankController : MonoBehaviour
     [SerializeField] AudioClip m_sound;
     /// <summary>弾丸が回復するまでの時間</summary>
     float m_time = 0f;
-    /// <summary>弾数を表示するテキスト</summary>
-    [SerializeField] Text m_bulletText;
+
+    LoadSceneScript m_loadSceneScript = default;
+
 
     /// <summary>現在の弾丸</summary>
     Bulletkinds m_currentBullet;
     public Bulletkinds CurrentBullet { get => m_currentBullet; set => m_currentBullet = value; }
-
-   
-   [SerializeField] GameManager m_gameManagerScript;
 
     private AudioSource m_audio;
     string[] m_controllerName = default;
@@ -49,6 +40,7 @@ public class TankController : MonoBehaviour
         m_controllerName = Input.GetJoystickNames();
         m_upperBody = transform.GetChild(0).gameObject;
         m_bulletSpwan = m_upperBody.transform.GetChild(0);
+        m_loadSceneScript = GetComponent<LoadSceneScript>();
         foreach (var name in m_controllerName)
         {
             Debug.Log(name);
@@ -57,40 +49,21 @@ public class TankController : MonoBehaviour
 
     void Update()
     {
-        if (m_gameManagerScript.m_moveFlag)
+        AddBullet();
+        if (m_controllerName[0] == "" && m_controllerName[0] != "Controller")
         {
-            AddBullet();
-            if (m_controllerName[0] == "" && m_controllerName[0] != "Controller" )
-            {
-                PS4Controller();
-                PS4BulletController();
-            }
-            else
-            {
-                XboxBulletController();
-                XboxController();
-            }
-            
+            PS4Controller();
+            PS4BulletController();
+        }
+        else
+        {
+            XboxBulletController();
+            XboxController();
         }
 
         if (Input.GetButton("X1Start"))
         {
-            Debug.Log("タイトル");
-            m_gameManagerScript.TitleBack();
-        }
-
-        m_bulletText.text = "Bullet:" + m_bulletCount.ToString();
-    }
-
-    /// <summary>Playerに弾丸が当たった時に呼ばれる　残機を減らす</summary>
-    /// <param name="collision"></param>
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Bullet" && m_gameManagerScript.m_failFlag == false && m_gameManagerScript.m_clearFlag == false)
-        {
-            m_gameManagerScript.m_failFlag = true;
-            GameManager.m_life--;
-            //Debug.Log(GameManager.m_life);
+            m_loadSceneScript.TitleBack();
         }
     }
 
@@ -147,7 +120,7 @@ public class TankController : MonoBehaviour
             Vector3 velo = this.transform.forward * m_speed;
             m_rb.velocity = velo;
         }
-        
+
         if (Input.GetButton("X1LB"))
         {
             m_upperBody.transform.Rotate(0, TankConfiguration.m_upperBodyRotateValue, 0);
@@ -231,7 +204,6 @@ public class TankController : MonoBehaviour
                 Instantiate(m_bullet, m_bulletSpwan);
                 break;
             case Bulletkinds.Speed:
-                Instantiate(m_bullet1, m_bulletSpwan);
                 break;
             case Bulletkinds.Double:
                 if (m_bulletCount >= 2)
@@ -262,50 +234,5 @@ public class TankController : MonoBehaviour
         Instantiate(m_bullet, m_bulletSpwan);
         m_audio.PlayOneShot(m_sound);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Break")
-        {
-            m_speed = 4f;
-            Debug.Log("Enter");
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Break")
-        {
-            m_speed = 8f;
-            Debug.Log("Exit");
-        }
-    }
 }
 
-/// <summary>弾丸の種類</summary>
-public enum Bulletkinds
-{
-    /// <summary> 通常の弾丸</summary>
-    Usually,
-    /// <summary> 通常よりも弾速が速い弾丸</summary>
-    Speed,
-    /// <summary> 二連弾丸</summary>
-    Double
-
-}
-
-//Ray ray = new Ray(m_bulletSpwan.position, m_bulletSpwan.forward);
-//RaycastHit hit;
-//Debug.DrawRay(ray.origin, ray.direction * 150.0f, Color.red, 1);
-//EnemyMoveScript enemyMove = default;
-//if (Physics.Raycast(ray, out hit, 15.0f))
-//{
-//    var go = hit.collider.gameObject;
-//    var parent = go.transform.root;
-//    enemyMove = parent.GetComponent<EnemyMoveScript>();
-//    enemyMove.m_hitRay = true;
-//}
-//else if (enemyMove != null)
-//{
-//    enemyMove.m_hitRay = false;
-//}

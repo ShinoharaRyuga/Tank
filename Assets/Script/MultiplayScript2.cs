@@ -60,7 +60,7 @@ public class MultiplayScript2 : MonoBehaviour
 
         if (xh != 0)
         {
-            this.transform.Rotate(this.transform.up, xh * 1.5f);
+            this.transform.Rotate(this.transform.up, xh * TankConfiguration.m_tankRotateValue);
         }
 
         if (Input.GetButton("X2RB"))
@@ -78,7 +78,7 @@ public class MultiplayScript2 : MonoBehaviour
 
         if (Input.GetButton("X2LB"))
         {
-            m_tankUpperBodys.transform.Rotate(0, 1, 0);
+            m_tankUpperBodys.transform.Rotate(0, TankConfiguration.m_upperBodyRotateValue, 0);
         }
 
         if (xLRT > 0 && rbFlag == false)
@@ -89,7 +89,7 @@ public class MultiplayScript2 : MonoBehaviour
         
         if (xLRT < 0)
         {
-            m_tankUpperBodys.transform.Rotate(0, -1, 0);
+            m_tankUpperBodys.transform.Rotate(0, -TankConfiguration.m_upperBodyRotateValue, 0);
         }
 
 
@@ -131,10 +131,12 @@ public class MultiplayScript2 : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet" && m_gameManagerScript.m_moveFlag)
         {
-            Destroy(this.gameObject);
             m_gameManagerScript.m_result = 1;
+            m_gameManagerScript.m_endFlag = true;
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
