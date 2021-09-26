@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text m_clearText;
     /// <summary>失敗を表示するテキスト</summary>
     [SerializeField] Text m_failText;
-    /// <summary>タイトルに戻るボタン</summary>
-    [SerializeField] GameObject m_titleBackButton;
+    
     /// <summary>Playerの戦車をコントロールするスクリプト</summary>
     [SerializeField] TankController m_tankControllerScript;
     /// <summary>シーンの遷移をするスクリプト</summary>
@@ -31,15 +30,20 @@ public class GameManager : MonoBehaviour
     /// <summary>ステージに存在する敵の総数</summary>
     public int m_enemy = 0;
     /// <summary>Playerの残機</summary>
-    public static  int m_life = 3;
+    public static  int m_life = 5;
     /// <summary>playerが全ての敵を倒した時のフラグ</summary>
     public  bool m_clearFlag = false;
 
+    AudioSource m_audio = default;
+    [SerializeField] AudioClip m_clearSE = default;
+    [SerializeField] AudioClip m_failSE = default;
+    [SerializeField] AudioClip m_gameOverSE = default;
+    [SerializeField] AudioClip m_gameClearSE = default;
     void Start()
     {
         m_clearText.gameObject.SetActive(false);
         m_failText.gameObject.SetActive(false);
-        m_titleBackButton.SetActive(false);
+        m_audio = this.gameObject.AddComponent<AudioSource>();
         m_loadSceneScript = GetComponent<LoadSceneScript>();
     }
 
@@ -52,9 +56,10 @@ public class GameManager : MonoBehaviour
         if (m_enemy <= 0 && !m_failFlag)
         {
             m_clearText.gameObject.SetActive(true);
-            m_titleBackButton.SetActive(true);
+            m_audio.PlayOneShot(m_clearSE);
             m_moveFlag = false;
             m_clearFlag = true;
+            m_failFlag = true;
             StartCoroutine(NextScene());
         }
 
@@ -63,13 +68,16 @@ public class GameManager : MonoBehaviour
         {
             m_failText.gameObject.SetActive(true);
             m_moveFlag = false;
+            m_clearFlag = true;
+            m_audio.PlayOneShot(m_failSE);
             StartCoroutine(RePlay());
         }
         else if(m_life <= 0 && !m_clearFlag) //GAMEOVER判定
         {
             m_failText.text = "GAME OVER";
             m_failText.gameObject.SetActive(true);
-            m_titleBackButton.SetActive(true);
+            m_clearFlag = true;
+            m_audio.PlayOneShot(m_gameOverSE);
             StartCoroutine(TitleBack());
         }
 
@@ -95,6 +103,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            m_audio.PlayOneShot(m_gameClearSE);
             yield return new WaitForSeconds(3f);
             m_loadSceneScript.TitleBack();
         }

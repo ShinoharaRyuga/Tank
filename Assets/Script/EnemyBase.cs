@@ -30,6 +30,7 @@ public class EnemyBase : MonoBehaviour
     /// <summary>砲身がある戦車の上部</summary>
     GameObject m_upperBody;
 
+    [SerializeField] AudioClip m_downSE = default;
     // Start is called before the first frame update
     void Start()
     {
@@ -114,6 +115,7 @@ public class EnemyBase : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             m_gameManagerScript.m_enemy--;
+            AudioSource.PlayClipAtPoint(m_downSE, transform.position);
         }
     }
 }

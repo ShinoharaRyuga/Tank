@@ -94,6 +94,7 @@ MonoBehaviour:
   m_count: 5
   m_gameManager: {fileID: 0}
   m_countFlag: 0
+  m_startSE: {fileID: 8300000, guid: 47ca4686e2eafb34e8a5332a65d9166e, type: 3}
 --- !u!1 &6344228487842530920
 GameObject:
   m_ObjectHideFlags: 0

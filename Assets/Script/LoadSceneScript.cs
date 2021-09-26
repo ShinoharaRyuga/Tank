@@ -17,7 +17,7 @@ public class LoadSceneScript : MonoBehaviour
     public void TitleBack()
     {
         SceneManager.LoadScene("Title");
-        GameManager.m_life = 3;
+        GameManager.m_life = 5;
     }
 
     /// <summary>リプレイ</summary>

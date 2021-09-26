@@ -41,6 +41,7 @@ public class TrainingTank : MonoBehaviour
         m_upperBody = transform.GetChild(0).gameObject;
         m_bulletSpwan = m_upperBody.transform.GetChild(0);
         m_loadSceneScript = GetComponent<LoadSceneScript>();
+        //m_panel.SetActive(false);
         foreach (var name in m_controllerName)
         {
             Debug.Log(name);
@@ -63,6 +64,7 @@ public class TrainingTank : MonoBehaviour
 
         if (Input.GetButton("X1Start"))
         {
+            //StartCoroutine(TitleBack());
             m_loadSceneScript.TitleBack();
         }
     }
@@ -234,5 +236,14 @@ public class TrainingTank : MonoBehaviour
         Instantiate(m_bullet, m_bulletSpwan);
         m_audio.PlayOneShot(m_sound);
     }
+
+    //IEnumerator TitleBack()
+    //{
+    //    m_panel.SetActive(true);
+    //    yield return new WaitForSeconds(1f);
+    //    m_fadeOutScript.StartFadeOut();
+    //    yield return new WaitForSeconds(2f);
+    //    m_loadSceneScript.TitleBack();
+    //}
 }
 

@@ -337,6 +337,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1381467307940168272, guid: e591605e44e0f9f4bb2e30610431734e,
         type: 3}
       propertyPath: m_RootOrder
@@ -534,6 +538,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1504989074, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
       propertyPath: m_gameManager
       value: 
@@ -612,6 +620,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1504989074, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
       propertyPath: m_gameManager
       value: 
@@ -690,6 +702,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1504989074, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
       propertyPath: m_gameManager
       value: 
@@ -940,6 +956,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1504989074, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
       propertyPath: m_gameManager
       value: 
@@ -1181,6 +1201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1381467307940168272, guid: e591605e44e0f9f4bb2e30610431734e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1274,6 +1298,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1381467307940168272, guid: e591605e44e0f9f4bb2e30610431734e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1367,6 +1395,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1381467307940168272, guid: e591605e44e0f9f4bb2e30610431734e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1605,12 +1637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1484103540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2640304217368794803, guid: 466ac37320150d74a86229054cba7525,
-    type: 3}
-  m_PrefabInstance: {fileID: 1484103537}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1484103541 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2640304217678993578, guid: 466ac37320150d74a86229054cba7525,
@@ -1854,7 +1880,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_titleBackButton
       value: 
-      objectReference: {fileID: 1484103540}
+      objectReference: {fileID: 0}
     - target: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
         type: 3}
       propertyPath: m_tankControllerScript
@@ -1881,6 +1907,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886677611, guid: e591605e44e0f9f4bb2e30610431734e, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1582250395}
     - target: {fileID: 1381467307940168272, guid: e591605e44e0f9f4bb2e30610431734e,
         type: 3}
       propertyPath: m_RootOrder

@@ -13,10 +13,12 @@ public class MultiPlayCount : MonoBehaviour
     Text m_countDownText;
 
     public bool m_countFlag = false;
-
-
+    AudioSource m_audio = default;
+    [SerializeField] AudioClip m_startSE = default;
+    private bool m_SEFlag = false;
     void Start()
     {
+        m_audio = gameObject.AddComponent<AudioSource>();
         m_countDownText = GetComponent<Text>();
         m_countDownText.text = "Xボタンを押してください";
     }
@@ -40,6 +42,11 @@ public class MultiPlayCount : MonoBehaviour
         {
             m_countDownText.text = "スタート！！";
             m_gameManager.m_moveFlag = true;
+            if (!m_SEFlag)
+            {
+                m_audio.PlayOneShot(m_startSE);
+                m_SEFlag = true;
+            }
         }
 
         if (m_count <= -1)

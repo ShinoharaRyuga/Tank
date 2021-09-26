@@ -13,7 +13,6 @@ public class MultiplayScript2 : MonoBehaviour
     [SerializeField] GameObject m_bullet;
     [SerializeField] SetController m_setController = default;
     [SerializeField] AudioClip m_sound;
-    [SerializeField] Text m_bulletTexts = default;
 
     public int m_playerNumber = 0;
     private bool m_ready = false;

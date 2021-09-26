@@ -336,24 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &256185563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2640304217368794803, guid: 466ac37320150d74a86229054cba7525,
-    type: 3}
-  m_PrefabInstance: {fileID: 256185561}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &256185564 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2640304217368794812, guid: 466ac37320150d74a86229054cba7525,
-    type: 3}
-  m_PrefabInstance: {fileID: 256185561}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256185563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3d2457e7afb2e4383535234c4aa700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &256185565 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2640304217678993578, guid: 466ac37320150d74a86229054cba7525,
@@ -890,12 +872,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_loadSceneScript
       value: 
-      objectReference: {fileID: 256185564}
+      objectReference: {fileID: 0}
     - target: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
         type: 3}
       propertyPath: m_titleBackButton
       value: 
-      objectReference: {fileID: 256185563}
+      objectReference: {fileID: 0}
     - target: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
         type: 3}
       propertyPath: m_tankControllerScript
@@ -1101,34 +1083,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
-      propertyPath: m_sound
-      value: 
-      objectReference: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}
-    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
-      propertyPath: m_addTime
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
-      propertyPath: m_fireMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
-      propertyPath: m_upperBody
-      value: 
-      objectReference: {fileID: 1748281985}
-    - target: {fileID: 313199850, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
-      propertyPath: m_playerMask.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_player
       value: 
       objectReference: {fileID: 314111021}
-    - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
-      propertyPath: m_addTime
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2092267567, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
       propertyPath: m_gameManagerScript
       value: 
@@ -1195,12 +1153,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09bed44e86e0224b91154c63ffd67bb, type: 3}
---- !u!1 &1748281985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3044688964364926330, guid: e09bed44e86e0224b91154c63ffd67bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1748281984}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1926832960
 GameObject:
   m_ObjectHideFlags: 0

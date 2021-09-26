@@ -32,7 +32,7 @@ public class BulletAddForce : MonoBehaviour
     {
         if (collision.gameObject.tag == "Tank" || collision.gameObject.tag == "PlayerTank" || collision.gameObject.tag == "Bullet")
         {
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject, 0);
             Destroy(this.gameObject);
         }
 

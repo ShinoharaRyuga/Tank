@@ -10,6 +10,9 @@ public class MultiPlayManager : MonoBehaviour
     [SerializeField] MultiPlayCount m_countScript = default;
 
     LoadSceneScript m_loadSceneScript = default;
+
+    AudioSource m_audio = default;
+    [SerializeField] AudioClip m_resultSE = default;
     /// <summary>敵とPlayerの動きを制限するフラグ</summary>
     public bool m_moveFlag = false;
     /// <summary>敵とPlayerの動きを制限するフラグ</summary>
@@ -21,7 +24,8 @@ public class MultiPlayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_loadSceneScript = GetComponent<LoadSceneScript>();  
+        m_loadSceneScript = GetComponent<LoadSceneScript>();
+        m_audio = this.gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,6 +55,7 @@ public class MultiPlayManager : MonoBehaviour
             m_resultText.color = Color.red;
             m_resultText.text = "1PWin";
             m_endFlag = false;
+            m_audio.PlayOneShot(m_resultSE);
             StartCoroutine(TitleBack());
         }
         else if (m_result == 2 && m_endFlag)
@@ -59,6 +64,7 @@ public class MultiPlayManager : MonoBehaviour
             m_resultText.color = Color.blue;
             m_resultText.text = "2PWin";
             m_endFlag = false;
+            m_audio.PlayOneShot(m_resultSE);
             StartCoroutine(TitleBack());
         }
     }

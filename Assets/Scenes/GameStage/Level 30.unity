@@ -695,12 +695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &599649110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2640304217368794803, guid: 466ac37320150d74a86229054cba7525,
-    type: 3}
-  m_PrefabInstance: {fileID: 599649107}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &599649111 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2640304217678993578, guid: 466ac37320150d74a86229054cba7525,
@@ -855,7 +849,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_titleBackButton
       value: 
-      objectReference: {fileID: 599649110}
+      objectReference: {fileID: 0}
     - target: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
         type: 3}
       propertyPath: m_tankControllerScript
@@ -2197,6 +2191,11 @@ PrefabInstance:
       propertyPath: m_player
       value: 
       objectReference: {fileID: 245639455}
+    - target: {fileID: 3250231024736581770, guid: f3d19bde96a12d949a0620de861646f1,
+        type: 3}
+      propertyPath: m_addTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3250231024736581770, guid: f3d19bde96a12d949a0620de861646f1,
         type: 3}
       propertyPath: m_gameManagerScript

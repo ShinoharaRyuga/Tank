@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 5915075526709678038}
   - component: {fileID: 9044900317772195363}
   - component: {fileID: 4930350280020199713}
+  - component: {fileID: 6666419366116135445}
   m_Layer: 9
   m_Name: LightBlueTank
   m_TagString: Tank
@@ -449,6 +450,7 @@ MonoBehaviour:
   m_lookFlag: 1
   m_player: {fileID: 0}
   m_gameManagerScript: {fileID: 0}
+  m_downSE: {fileID: 8300000, guid: 8f7652f664be78349be91f58056046c3, type: 3}
 --- !u!114 &9044900317772195363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +466,6 @@ MonoBehaviour:
   m_playerPos: {fileID: 0}
   m_gameManager: {fileID: 0}
   m_mindistance: 10
-  m_hitRay: 0
 --- !u!195 &4930350280020199713
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -487,6 +488,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &6666419366116135445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8671251866569572717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &8671251867009678918
 GameObject:
   m_ObjectHideFlags: 0

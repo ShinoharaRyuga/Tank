@@ -288,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3044688964546626128, guid: e09bed44e86e0224b91154c63ffd67bb,
         type: 3}
@@ -561,12 +561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1145435093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2640304217368794803, guid: 466ac37320150d74a86229054cba7525,
-    type: 3}
-  m_PrefabInstance: {fileID: 2640304216232322406}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1169153439
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +598,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169153439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1002, y: 623, z: 0}
+  m_LocalPosition: {x: 0, y: 623, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -858,7 +852,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1763108647
 PrefabInstance:
@@ -1063,7 +1057,7 @@ PrefabInstance:
     - target: {fileID: 4705581874024202463, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.57
+      value: -4.45
       objectReference: {fileID: 0}
     - target: {fileID: 4705581874024202463, guid: 1f454f9864c8d2c448f8d05c827f0592,
         type: 3}
@@ -1366,6 +1360,11 @@ PrefabInstance:
       propertyPath: m_gameManager
       value: 
       objectReference: {fileID: 81240636}
+    - target: {fileID: 2640304216413833634, guid: 466ac37320150d74a86229054cba7525,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2640304217285261447, guid: 466ac37320150d74a86229054cba7525,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1584,7 +1583,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_titleBackButton
       value: 
-      objectReference: {fileID: 1145435093}
+      objectReference: {fileID: 0}
     - target: {fileID: 3304217191356000950, guid: 260400b1f6ceb7b47acafb3f3b6c50b6,
         type: 3}
       propertyPath: m_tankControllerScript

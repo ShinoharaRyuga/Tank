@@ -441,11 +441,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bullet: {fileID: 0}
-  m_bullet1: {fileID: 0}
   m_bulletCount: 0
   m_maxBullet: 0
   m_sound: {fileID: 0}
-  m_gameManagerScript: {fileID: 0}
 --- !u!1 &383556408458380275
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1749692548450736468
 Transform:
   m_ObjectHideFlags: 0

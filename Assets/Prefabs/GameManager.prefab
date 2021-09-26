@@ -46,7 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_clearText: {fileID: 0}
   m_failText: {fileID: 0}
-  m_titleBackButton: {fileID: 0}
   m_tankControllerScript: {fileID: 0}
   m_countScript: {fileID: 0}
   m_stageText: {fileID: 0}
@@ -54,8 +53,11 @@ MonoBehaviour:
   m_moveFlag: 0
   m_failFlag: 0
   m_enemy: 2
-  m_life: 3
   m_clearFlag: 0
+  m_clearSE: {fileID: 8300000, guid: a336b9178949ffa4dabb4f0dd7da0a3c, type: 3}
+  m_failSE: {fileID: 8300000, guid: 4e8f1d70da7e9ef4c8da1de5a4a6c1f3, type: 3}
+  m_gameOverSE: {fileID: 8300000, guid: 1b1a49855f0b0b14e834a90f80d93efa, type: 3}
+  m_gameClearSE: {fileID: 8300000, guid: 5d7834724a28e4642ae7daa5a5d9f673, type: 3}
 --- !u!114 &8858774881312219922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,3 +70,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3d2457e7afb2e4383535234c4aa700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sceneIndex: 0

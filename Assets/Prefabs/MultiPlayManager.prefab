@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_resultText: {fileID: 0}
   m_countScript: {fileID: 0}
+  m_resultSE: {fileID: 8300000, guid: 5d7834724a28e4642ae7daa5a5d9f673, type: 3}
   m_moveFlag: 0
   m_result: 0
   m_readyCount: 0

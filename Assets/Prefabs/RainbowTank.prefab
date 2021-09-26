@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 182469269179765119}
   - component: {fileID: 4278891656542535293}
   - component: {fileID: 8671251865571048294}
+  - component: {fileID: 85762709437576350}
   m_Layer: 9
   m_Name: RainbowTank
   m_TagString: Tank
@@ -451,6 +452,7 @@ MonoBehaviour:
   m_lookFlag: 1
   m_player: {fileID: 0}
   m_gameManagerScript: {fileID: 0}
+  m_downSE: {fileID: 8300000, guid: 8f7652f664be78349be91f58056046c3, type: 3}
 --- !u!114 &182469269179765119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +468,6 @@ MonoBehaviour:
   m_playerPos: {fileID: 0}
   m_gameManager: {fileID: 0}
   m_mindistance: 0
-  m_hitRay: 0
 --- !u!195 &4278891656542535293
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -502,6 +503,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gameManager: {fileID: 0}
+--- !u!65 &85762709437576350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530241263942841905}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &530241264324331802
 GameObject:
   m_ObjectHideFlags: 0
