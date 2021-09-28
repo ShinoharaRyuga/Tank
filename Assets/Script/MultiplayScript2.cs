@@ -18,7 +18,8 @@ public class MultiplayScript2 : MonoBehaviour
     private bool m_ready = false;
     float m_speed = 8f;
     float m_time = 0f;
-
+    private bool m_fire = false;
+    private float m_firetime = 0.5f; 
     
     [SerializeField] MultiPlayManager m_gameManagerScript;
     AudioSource m_audio;
@@ -38,6 +39,9 @@ public class MultiplayScript2 : MonoBehaviour
             m_gameManagerScript.m_readyCount++;
             m_ready = true;
         }
+
+        m_firetime -= Time.deltaTime;
+
 
         if (m_playerNumber == 2 && m_setController.m_player2 == 2  && m_gameManagerScript.m_moveFlag == true)
         {
@@ -98,15 +102,31 @@ public class MultiplayScript2 : MonoBehaviour
     {
         if (m_bulletCounts > 0)
         {
-            if (Input.GetButtonDown("X2Xbutton"))
+            if (Input.GetButton("X2Xbutton"))
             {
-                Debug.Log("xbox2");
-                m_audio.PlayOneShot(m_sound);
-                m_bulletCounts--;
-                Instantiate(m_bullet, m_bulletSpwans);
+                if (m_firetime <= 0)
+                {
+                    Fire();
+                    m_firetime = 0.5f;
+                }
             }
         }
     }
+
+    //public void Xbox2BulletController()
+    //{
+    //    if (m_bulletCounts > 0)
+    //    {
+    //        if (Input.GetButtonDown("X2Xbutton"))
+    //        {
+    //            Debug.Log("Xbox");
+    //            Debug.Log("発射");
+    //            m_audio.PlayOneShot(m_sound);
+    //            m_bulletCounts--;
+    //            Instantiate(m_bullet, m_bulletSpwans);
+    //        }
+    //    }
+    //}
 
     /// <summary>時間で弾丸が回復する関数</summary>
     public void AddBullet()
@@ -155,6 +175,14 @@ public class MultiplayScript2 : MonoBehaviour
             m_speed = 8f;
             Debug.Log("Exit");
         }
+    }
+
+     void Fire()
+    {
+        Debug.Log("hit");
+        m_audio.PlayOneShot(m_sound);
+        m_bulletCounts--;
+        Instantiate(m_bullet, m_bulletSpwans);
     }
 }
 

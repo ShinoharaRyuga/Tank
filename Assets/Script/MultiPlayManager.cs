@@ -40,7 +40,7 @@ public class MultiPlayManager : MonoBehaviour
 
     void SetResult()
     {
-        if (m_readyCount == 1)
+        if (m_readyCount == 2)
         {
             m_countScript.m_countFlag = true;
         }

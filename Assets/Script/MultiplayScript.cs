@@ -92,8 +92,8 @@ public class MultiplayScript : MonoBehaviour
         {
             if (Input.GetButtonDown("X1Xbutton"))
             {
-                Debug.Log("Xbox");
-                Debug.Log("発射");
+                //Debug.Log("Xbox");
+                //Debug.Log("発射");
                 m_audio.PlayOneShot(m_sound);
                 m_bulletCounts--;
                 Instantiate(m_bullet, m_bulletSpwans);
