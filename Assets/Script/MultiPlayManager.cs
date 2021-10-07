@@ -26,6 +26,7 @@ public class MultiPlayManager : MonoBehaviour
     {
         m_loadSceneScript = GetComponent<LoadSceneScript>();
         m_audio = this.gameObject.AddComponent<AudioSource>();
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame

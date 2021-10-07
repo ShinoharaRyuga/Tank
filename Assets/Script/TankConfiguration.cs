@@ -53,47 +53,47 @@ public class TankConfiguration : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             m_tankRotateNumber = 1;
-            m_tankRotateValue = 0.5f;
+            m_tankRotateValue = 0.1f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad2))
         {
             m_tankRotateNumber = 2;
-            m_tankRotateValue = 0.6f;
+            m_tankRotateValue = 0.2f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad3))
         {
             m_tankRotateNumber = 3;
-            m_tankRotateValue = 0.7f;
+            m_tankRotateValue = 0.3f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad4))
         {
             m_tankRotateNumber = 4;
-            m_tankRotateValue = 0.8f;
+            m_tankRotateValue = 0.4f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad5))
         {
             m_tankRotateNumber = 5;
-            m_tankRotateValue = 0.9f;
+            m_tankRotateValue = 0.5f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad6))
         {
             m_tankRotateNumber = 6;
-            m_tankRotateValue = 1.0f;
+            m_tankRotateValue = 0.6f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad7))
         {
             m_tankRotateNumber = 7;
-            m_tankRotateValue = 1.1f;
+            m_tankRotateValue = 0.7f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad8))
         {
             m_tankRotateNumber = 8;
-            m_tankRotateValue = 1.2f;
+            m_tankRotateValue = 0.8f;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad9))
         {
             m_tankRotateNumber = 9;
-            m_tankRotateValue = 1.3f;
+            m_tankRotateValue = 0.9f;
         }
     }
 

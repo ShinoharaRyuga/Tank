@@ -49,6 +49,7 @@ public class TankController : MonoBehaviour
         m_controllerName = Input.GetJoystickNames();
         m_upperBody = transform.GetChild(0).gameObject;
         m_bulletSpwan = m_upperBody.transform.GetChild(0);
+        Application.targetFrameRate = 60;
         foreach (var name in m_controllerName)
         {
             Debug.Log(name);

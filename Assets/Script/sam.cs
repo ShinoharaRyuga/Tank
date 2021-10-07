@@ -9,6 +9,7 @@ public class sam : MonoBehaviour
     {
         Debug.Log("本体感度　" + TankConfiguration.m_tankRotateValue);
         Debug.Log("上部感度　" + TankConfiguration.m_upperBodyRotateValue);
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame

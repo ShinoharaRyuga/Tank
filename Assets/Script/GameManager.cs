@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         m_failText.gameObject.SetActive(false);
         m_audio = this.gameObject.AddComponent<AudioSource>();
         m_loadSceneScript = GetComponent<LoadSceneScript>();
+        Application.targetFrameRate = 60;
     }
 
     void Update()

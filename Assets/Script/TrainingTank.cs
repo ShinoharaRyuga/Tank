@@ -46,6 +46,7 @@ public class TrainingTank : MonoBehaviour
         {
             Debug.Log(name);
         }
+        Application.targetFrameRate = 60;
     }
 
     void Update()
